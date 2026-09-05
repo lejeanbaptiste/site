@@ -35,8 +35,17 @@ curl -fsSL -o "$BUILD_DIR/$ZIP" "$URL"
 unzip -q "$BUILD_DIR/$ZIP" -d "$BUILD_DIR"
 mv "$BUILD_DIR/grav-admin" "$GRAV_DIR"
 
-# 2. Overlay our sources on top of the stock skeleton (keeps stock system
-#    plugins: error, problems, form, ...).
+# The -admin bundle 302-redirects / -> /admin until an admin account exists, so a
+# headless crawl never reaches the site. We only publish the public pages -> drop
+# the admin plugins entirely (frontend renders fine without them).
+rm -rf "$GRAV_DIR"/user/plugins/admin \
+       "$GRAV_DIR"/user/plugins/admin2 \
+       "$GRAV_DIR"/user/plugins/login
+
+# 2. Overlay our sources. pages/ and themes/ must *replace* the skeleton's demo
+#    content (else stray pages like /typography leak into the crawl); config/,
+#    plugins/, accounts/ from the skeleton are kept.
+rm -rf "$GRAV_DIR/user/pages" "$GRAV_DIR/user/themes"
 rsync -a --exclude='.DS_Store' user/ "$GRAV_DIR/user/"
 
 # 3. Build-time config. Written into the throwaway build tree only - the
