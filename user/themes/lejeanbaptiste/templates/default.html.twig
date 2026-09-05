@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang ?: 'fr' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Grognard — éditeur XML pour savants exigeants.">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  {% do assets.addCss('theme://css/site.css') %}
+  {% if page.slug == 'download' %}{% do assets.addJs('theme://js/download.js', {group: 'bottom'}) %}{% endif %}
+  {{ assets.css()|raw }}
+</head>
+<body class="{{ page.header.body_classes|default('') }}">
+  <div class="site-shell">
+    {% include 'partials/header.html.twig' %}
+    {% block main %}<main class="page-content page-content--standard">
+      <article>
+        <p class="eyebrow">Grognard</p>
+        <h1>{{ page.title }}</h1>
+        <div class="prose">{{ page.content|raw }}</div>
+      </article>
+    </main>{% endblock %}
+    {% include 'partials/footer.html.twig' %}
+  </div>
+  {{ assets.js('bottom')|raw }}
+</body>
+</html>

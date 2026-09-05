@@ -1,0 +1,11 @@
+<header class="site-header">
+  <a class="brand" href="{{ base_url_relative ?: '/' }}" aria-label="Grognard, accueil">
+    <img class="brand__icon" src="{{ url('theme://images/logo-grognard.svg') }}" alt="">
+    <span class="brand__name">Grognard</span>
+  </a>
+  <nav class="site-nav" aria-label="Navigation principale">
+    {% for item in pages.children.visible %}
+      {% if item.slug != 'home' %}<a href="{{ item.url }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.menu }}</a>{% endif %}
+    {% endfor %}
+  </nav>
+</header>

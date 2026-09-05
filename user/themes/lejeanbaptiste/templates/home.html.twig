@@ -1,0 +1,97 @@
+{% extends 'default.html.twig' %}
+
+{% block main %}
+  <main class="hero">
+    <div class="hero__texture" aria-hidden="true"></div>
+    <img class="hero__splash" src="{{ url('theme://images/long_splash.png') }}" alt="">
+    <section class="hero__copy">
+      <div class="hero__rule"><span></span><i>✦</i><span></span></div>
+      <div class="hero__content">{{ page.content|raw }}</div>
+    </section>
+  </main>
+
+  <section class="manifesto">
+    <p class="eyebrow">Une méthode, pas un compromis</p>
+    <p>La précision d’un encodage ouvert rencontre le plaisir d’un atelier bien fait.</p>
+    <a class="text-link" href="/projet">Découvrir le projet <span aria-hidden="true">→</span></a>
+  </section>
+
+  <section class="home-paradigm">
+    <div class="home-section-heading">
+      <p class="eyebrow">Le parti pris</p>
+      <h2>Un éditeur pensé autour du document.</h2>
+    </div>
+    <div class="home-paradigm__copy">
+      <p>Grognard ne traite pas le XML comme un format d’export. Le XML est le document de travail : visible, structuré, validable, transportable et réutilisable.</p>
+      <p>Le texte reste au centre. Les outils viennent l’éclairer : schéma, balisage, entités, traduction, recherche, validation et historique.</p>
+    </div>
+  </section>
+
+  <section class="home-screenshots">
+    <div class="home-section-heading home-section-heading--light">
+      <p class="eyebrow">Voir le travail</p>
+      <h2>La précision, sans quitter la page.</h2>
+      <p>Ces aperçus sont temporaires : ils seront remplacés par des captures Grognard définitives.</p>
+    </div>
+    <div class="screenshot-grid">
+      <figure class="product-shot">
+        <div class="product-shot__frame"><img src="{{ url('theme://images/screenshot-workspace.png') }}" alt="Aperçu temporaire de l’espace de travail XML"></div>
+        <figcaption><strong>Le document d’abord</strong><span>Projet, fichiers, onglets et texte restent réunis dans une même fenêtre.</span></figcaption>
+      </figure>
+      <figure class="product-shot">
+        <div class="product-shot__frame"><img src="{{ url('theme://images/screenshot-entities.png') }}" alt="Aperçu temporaire d’un outil d’identification d’entités"></div>
+        <figcaption><strong>Identifier avec méthode</strong><span>Les noms et les lieux deviennent des données contrôlables, pas des annotations perdues.</span></figcaption>
+      </figure>
+      <figure class="product-shot">
+        <div class="product-shot__frame"><img src="{{ url('theme://images/screenshot-validation.png') }}" alt="Aperçu temporaire du panneau de validation XML"></div>
+        <figcaption><strong>Vérifier avant de transmettre</strong><span>Le schéma, la structure et l’historique accompagnent chaque décision éditoriale.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="home-features">
+    <div class="home-section-heading">
+      <p class="eyebrow">L’atelier complet</p>
+      <h2>Un seul espace.<br>Plusieurs niveaux de lecture.</h2>
+    </div>
+    <div class="feature-grid">
+      <article><span>01</span><h3>Transcrire</h3><p>Écrivez dans une vue visuelle familière, avec accès direct au XML source.</p></article>
+      <article><span>02</span><h3>Structurer</h3><p>Appliquez les balises et attributs autorisés par le schéma de votre projet.</p></article>
+      <article><span>03</span><h3>Identifier</h3><p>Reliez personnes, lieux, organisations et œuvres à des fiches d’autorité.</p></article>
+      <article><span>04</span><h3>Traduire</h3><p>Travaillez dans des fichiers compagnons alignés sur les unités du texte source.</p></article>
+      <article><span>05</span><h3>Importer</h3><p>Faites venir des textes depuis des sources web ou des fichiers locaux.</p></article>
+      <article><span>06</span><h3>Contrôler</h3><p>Recherchez, interrogez en XPath, validez et inspectez votre corpus.</p></article>
+    </div>
+  </section>
+
+  <section class="home-comparison">
+    <div class="home-section-heading home-section-heading--light">
+      <p class="eyebrow">Une autre manière de travailler</p>
+      <h2>Pourquoi Grognard&nbsp;?</h2>
+    </div>
+    <div class="comparison-copy">
+      <p>Les éditeurs XML généralistes donnent du contrôle mais peu de contexte savant. Les outils web facilitent le partage mais dépendent d’un serveur, d’un dépôt ou d’une connexion.</p>
+      <p>Grognard choisit un autre centre de gravité : le document local du chercheur, ses fichiers ouverts, ses autorités, ses traductions et son histoire.</p>
+    </div>
+    <div class="comparison-table" role="table" aria-label="Comparaison des paradigmes d’édition">
+      <div role="row" class="comparison-table__head"><span role="columnheader">Paradigme</span><span role="columnheader">Centre de gravité</span><span role="columnheader">Ce que Grognard privilégie</span></div>
+      <div role="row"><strong role="cell">XML généraliste</strong><span role="cell">Le format et la conformité</span><span role="cell">Le format <em>et</em> le geste éditorial</span></div>
+      <div role="row"><strong role="cell">Édition web</strong><span role="cell">Le serveur et la collaboration</span><span role="cell">Le local, l’autonomie et le partage choisi</span></div>
+      <div role="row"><strong role="cell">Grognard</strong><span role="cell">Le document savant</span><span role="cell">Structure, précision, clarté</span></div>
+    </div>
+  </section>
+
+  <section class="home-trust">
+    <p class="eyebrow">Des bases solides</p>
+    <div class="trust-grid">
+      <span>XML / TEI ouvert</span><span>Fonctionnement hors ligne</span><span>Fichiers locaux</span><span>Validation par schéma</span><span>Projets compatibles Git</span><span>Analyse reproductible</span>
+    </div>
+  </section>
+
+  <section class="home-coda">
+    <p class="eyebrow">Commencer simplement</p>
+    <h2>Un texte suffit pour commencer.</h2>
+    <p>Ouvrez un projet, choisissez un schéma et donnez à votre prochaine édition une structure que vous pourrez relire, vérifier et transmettre.</p>
+    <div class="home-actions"><a class="button button--gold" href="/download">Télécharger Grognard <span aria-hidden="true">→</span></a><a class="text-link" href="/guide">Lire le guide <span aria-hidden="true">↗</span></a></div>
+  </section>
+{% endblock %}

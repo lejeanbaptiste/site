@@ -1,0 +1,30 @@
+{% set partner_logos = [
+  { file: 'cream-CRCAO.png', url: 'https://www.crcao.fr', name: 'CRCAO' },
+  { file: 'cream-CNRS.png', url: 'https://www.cnrs.fr', name: 'CNRS' },
+  { file: 'cream-college-de-france.png', url: 'https://www.college-de-france.fr', name: 'Collège de France' },
+  { file: 'cream-EPHE.png', url: 'https://www.ephe.psl.eu', name: 'EPHE-PSL' },
+  { file: 'cream-HN.png', url: 'https://www.huma-num.fr', name: 'Huma-Num' },
+  { file: 'cream-UPC.png', url: 'https://u-paris.fr', name: 'Université Paris Cité' }
+] %}
+
+<footer class="site-footer">
+  <div class="site-footer__partners">
+    <p class="site-footer__label">Avec le soutien de</p>
+    <div class="partner-logos">
+      {% for partner in partner_logos %}
+        <a class="partner-logo" href="{{ partner.url }}" target="_blank" rel="noopener noreferrer" title="{{ partner.name }}">
+          <img src="{{ url('theme://images/' ~ partner.file) }}" alt="{{ partner.name }}" loading="lazy">
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <div class="site-footer__brand"><span>Grognard</span><i>L’ordre dans le texte.</i></div>
+    <p>Un éditeur pour les textes qui méritent du temps.</p>
+    <div class="site-footer__links">
+      <a href="https://github.com/lejeanbaptiste/lejeanbaptiste">Code source</a>
+      <a href="{{ base_url_relative }}/legal">Mentions légales</a>
+      <span>© {{ "now"|date("Y") }} · Paris</span>
+    </div>
+  </div>
+</footer>

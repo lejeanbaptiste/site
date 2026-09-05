@@ -1,0 +1,9 @@
+name: Grognard
+slug: lejeanbaptiste
+type: theme
+version: 0.1.0
+description: A crafted editorial theme for Grognard.
+author:
+  name: Grognard
+form:
+  validation: loose

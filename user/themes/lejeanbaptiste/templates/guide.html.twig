@@ -1,0 +1,21 @@
+{% extends 'default.html.twig' %}
+
+{% block main %}
+  <main class="guide-page">
+    <section class="guide-hero">
+      <p class="eyebrow">Guide de l’atelier</p>
+      <h1>Du premier folio<br>au texte <em>vivant.</em></h1>
+      <p>Un parcours de travail pour éditer avec méthode : ouvrir, transcrire, structurer, enrichir, vérifier et transmettre.</p>
+      <nav class="guide-anchors" aria-label="Sommaire du guide">
+        <a href="#premiers-pas">Commencer</a>
+        <a href="#projet">Projet</a>
+        <a href="#editer">Transcrire</a>
+        <a href="#entites">Identifier</a>
+        <a href="#traduire">Traduire</a>
+        <a href="#controler">Contrôler</a>
+        <a href="#raccourcis">Raccourcis</a>
+      </nav>
+    </section>
+    <div class="guide-content">{{ page.content|raw }}</div>
+  </main>
+{% endblock %}

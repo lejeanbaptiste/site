@@ -1,0 +1,39 @@
+# Slim repo: this checkout lives inside a full local Grav install, but only the
+# Grognard site sources are version-controlled. Ignore everything, then re-include
+# just what is ours. Grav core is downloaded fresh by the build (see scripts/).
+
+/*
+!/.gitignore
+!/.github/
+!/README.md
+!/grav-version
+!/scripts/
+!/user/
+
+# --- .github: only our deploy workflow -------------------------------------
+/.github/*
+!/.github/workflows/
+/.github/workflows/*
+!/.github/workflows/build.yml
+
+# --- user/: content, config and our theme only ---------------------------------
+/user/*
+!/user/config/
+!/user/pages/
+!/user/themes/
+/user/themes/*
+!/user/themes/lejeanbaptiste/
+
+# Never track secrets or machine-local state, even inside the allowed dirs.
+/user/config/*-private.php
+/user/config/*-private.php.tmp
+/user/config/versions.yaml
+/user/config/media.yaml
+/user/accounts/
+/user/data/
+
+# --- build artefacts & local cruft -------------------------------------------
+/build/
+/public/
+**/.DS_Store
+*.swp
