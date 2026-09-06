@@ -62,7 +62,7 @@ Lorsque vous ouvrez un projet existant, ouvrez le **panneau de navigation des fi
 
 Pour créer un nouveau fichier dans le projet courant, utilisez le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd>, ou choisissez **Fichier → Nouveau fichier**. Grognard crée le document à partir du squelette correspondant au schéma du projet. Lors du premier enregistrement, choisissez son nom et son emplacement dans le dossier du projet.
 
-Vous pouvez importer des fichiers locaux ainsi que des éditions numériques en ligne provenant de différentes sources et dans différents formats. Pour plus d’informations, consultez la section [Fichiers](/guide#importer).
+Vous pouvez importer des fichiers locaux ainsi que des éditions numériques en ligne provenant de différentes sources et dans différents formats. Pour plus d’informations, consultez la page [Fichiers](/guide/fichiers).
 
 Pour une première prise en main, ouvrez seulement quelques paragraphes. Vous pourrez ainsi vérifier le résultat avant d’importer ou de modifier un corpus entier.
 
@@ -185,3 +185,5 @@ La désambiguïsation débloque plusieurs usages :
 - préparer des recherches, des listes, des tableaux, des chronologies ou des cartes à partir du corpus.
 
 Les questions que vous poserez, les analyses que vous conduirez et les formes que prendra votre résultat vous appartiennent. Elles demanderont peut-être du code propre à votre projet. Mais vous aurez déjà accompli la partie la plus longue et la plus difficile : transformer votre travail sur les sources en un ensemble de données lisible, vérifiable et réutilisable.
+
+Pour comprendre où vivent ces entités et comment les entretenir, consultez la page [Base de données](/guide/base-de-donnees).
