@@ -3,9 +3,29 @@
 {% block main %}
   <main class="guide-page">
     <section class="guide-hero">
-      <p class="eyebrow">Guide de l’atelier</p>
-      <h1>Du premier folio<br>au texte <em>vivant.</em></h1>
-      <p>Un parcours de travail pour éditer avec méthode : ouvrir, transcrire, structurer, enrichir, vérifier et transmettre.</p>
+      <div class="guide-hero__main">
+        <p class="eyebrow">Guide de l’atelier</p>
+        <h1>Du premier folio<br>au texte <em>vivant.</em></h1>
+        <p>Un parcours de travail pour éditer avec méthode : ouvrir, transcrire, structurer, enrichir, vérifier et transmettre.</p>
+      </div>
+      <div class="guide-feature-grid" aria-label="Les grands domaines du guide">
+        <figure class="guide-feature-card">
+          <img src="{{ url('theme://images/guide-advanced.png') }}" alt="Portrait d’un officier en uniforme" loading="eager">
+          <figcaption>Fonctionnalités avancées</figcaption>
+        </figure>
+        <figure class="guide-feature-card">
+          <img src="{{ url('theme://images/guide-basic.png') }}" alt="Portrait d’un officier en uniforme devant un palais" loading="eager">
+          <figcaption>Fonctions de base</figcaption>
+        </figure>
+        <figure class="guide-feature-card">
+          <img src="{{ url('theme://images/guide-files.png') }}" alt="Portrait d’un soldat chargé de dossiers" loading="eager">
+          <figcaption>Fichiers</figcaption>
+        </figure>
+        <figure class="guide-feature-card">
+          <img src="{{ url('theme://images/guide-database.png') }}" alt="Portrait d’un archiviste dans une salle de données" loading="eager">
+          <figcaption>Base de données</figcaption>
+        </figure>
+      </div>
       <nav class="guide-anchors" aria-label="Sommaire du guide">
         <a href="#premiers-pas">Commencer</a>
         <a href="#projet">Projet</a>
