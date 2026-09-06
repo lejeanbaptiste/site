@@ -7,5 +7,6 @@
     {% for item in pages.children.visible %}
       {% if item.slug != 'home' %}<a href="{{ item.url }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.menu }}</a>{% endif %}
     {% endfor %}
+    <a href="https://grognard.github.io/scoreboard/" target="_blank" rel="noopener noreferrer">Classement</a>
   </nav>
 </header>
