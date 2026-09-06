@@ -23,7 +23,7 @@ template: guide
   <div class="guide-section__body">
     <p class="guide-lede">Un projet Grognard n’est pas un simple dossier de fichiers. Il porte les conditions qui rendent votre édition compréhensible et durable.</p>
     <ol class="guide-steps">
-      <li><strong>Renseignez l’édition</strong><span>Dans <em>Project → Edition metadata…</em>, indiquez le titre, la langue, les responsables et les informations communes à l’ensemble du projet.</span></li>
+      <li><strong>Renseignez l’édition</strong><span>Dans <em>Projet → Métadonnées de l’édition…</em>, indiquez le titre, la langue, les responsables et les informations communes à l’ensemble du projet.</span></li>
       <li><strong>Créez un document</strong><span><kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd> ouvre un nouveau fichier à partir du squelette correspondant au schéma actif. Le premier enregistrement vous propose un emplacement.</span></li>
       <li><strong>Complétez le fichier</strong><span>Les métadonnées d’édition servent de valeurs par défaut ; le panneau de métadonnées du fichier permet de préciser son titre et sa source.</span></li>
       <li><strong>Gardez les éléments liés ensemble</strong><span>Les fichiers source, traductions, schéma et données d’entités forment un ensemble. Organisez et sauvegardez le projet comme tel.</span></li>
@@ -94,8 +94,8 @@ template: guide
   <div class="guide-section__body">
     <p class="guide-lede">L’import accélère la préparation ; il ne remplace pas le travail éditorial. Chaque fichier importé doit être inspecté et validé.</p>
     <ol class="guide-steps">
-      <li><strong>Importez depuis une source web</strong><span>Pour Wikisource, utilisez <em>File → Import from Wikisource…</em>. L’extension de navigateur est un raccourci ; l’import intégré reste disponible.</span></li>
-      <li><strong>Importez un fichier local</strong><span><em>File → Import…</em> accepte notamment des fichiers texte et des documents XML de la même famille que le projet.</span></li>
+      <li><strong>Importez depuis une source web</strong><span>Pour Wikisource, utilisez <em>Fichier → Importer depuis Wikisource…</em>. L’extension de navigateur est un raccourci ; l’import intégré reste disponible.</span></li>
+      <li><strong>Importez un fichier local</strong><span><em>Fichier → Importer des documents</em> accepte notamment des fichiers texte et des documents XML de la même famille que le projet.</span></li>
       <li><strong>Choisissez le périmètre</strong><span>Vous pouvez importer un fichier, plusieurs fichiers ou un dossier. Les sorties sont écrites dans le projet cible et portent leur provenance.</span></li>
       <li><strong>Inspectez avant de généraliser</strong><span>Ouvrez un résultat, vérifiez les paragraphes, les métadonnées, les balises et les caractères spéciaux avant de traiter le reste du corpus.</span></li>
     </ol>
@@ -123,7 +123,7 @@ template: guide
     <p class="guide-lede">La sauvegarde n’est pas la dernière étape. Elle accompagne chaque décision et doit pouvoir réparer une mauvaise manipulation.</p>
     <ol class="guide-steps">
       <li><strong>Enregistrez souvent</strong><span>Les fichiers restent dans votre projet local. Enregistrez après une série de décisions cohérentes, avant une opération globale et avant une modification de schéma.</span></li>
-      <li><strong>Utilisez l’historique</strong><span><em>File → History…</em> permet de retrouver des états antérieurs d’un fichier ; <em>Project → Rollback…</em> restaure un état du projet.</span></li>
+      <li><strong>Utilisez l’historique</strong><span><em>Fichier → Historique…</em> permet de retrouver des états antérieurs d’un fichier ; <em>Projet → Restaurer…</em> restaure un état du projet.</span></li>
       <li><strong>Ajoutez une vraie sauvegarde</strong><span>Time Machine est un filet de sécurité local. Il ne remplace ni une copie externe, ni Git, ni une politique de sauvegarde d’équipe.</span></li>
       <li><strong>Transportez l’ensemble</strong><span>Les traductions, schémas, fichiers XML et données d’entités qui se référencent mutuellement doivent voyager ensemble.</span></li>
     </ol>
