@@ -4,15 +4,15 @@
   { file: 'cream-college-de-france.png', url: 'https://www.college-de-france.fr', name: 'Collège de France' },
   { file: 'cream-EPHE.png', url: 'https://www.ephe.psl.eu', name: 'EPHE-PSL' },
   { file: 'cream-HN.png', url: 'https://www.huma-num.fr', name: 'Huma-Num' },
-  { file: 'cream-UPC.png', url: 'https://u-paris.fr', name: 'Université Paris Cité' }
+  { file: 'cream-UPC.png', url: 'https://u-paris.fr', name: 'Université Paris Cité', class: 'partner-logo--upc' }
 ] %}
 
 <footer class="site-footer">
   <div class="site-footer__partners">
-    <p class="site-footer__label">Avec le soutien de</p>
+    <p class="site-footer__label">Partenaires institutionnels</p>
     <div class="partner-logos">
       {% for partner in partner_logos %}
-        <a class="partner-logo" href="{{ partner.url }}" target="_blank" rel="noopener noreferrer" title="{{ partner.name }}">
+        <a class="partner-logo{% if partner.class %} {{ partner.class }}{% endif %}" href="{{ partner.url }}" target="_blank" rel="noopener noreferrer" title="{{ partner.name }}">
           <img src="{{ url('theme://images/' ~ partner.file) }}" alt="{{ partner.name }}" loading="lazy">
         </a>
       {% endfor %}
@@ -23,7 +23,9 @@
     <p>Un éditeur pour les textes qui méritent du temps.</p>
     <div class="site-footer__links">
       <a href="https://github.com/lejeanbaptiste/lejeanbaptiste">Code source</a>
+      <a href="{{ base_url_relative }}/projet#l-équipe-et-les-premiers-lecteurs">Équipe</a>
       <a href="{{ base_url_relative }}/legal">Mentions légales</a>
+      <a href="{{ base_url_relative }}/privacy">Confidentialité</a>
       <span>© {{ "now"|date("Y") }} · Paris</span>
     </div>
   </div>

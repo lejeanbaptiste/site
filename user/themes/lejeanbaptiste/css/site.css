@@ -63,12 +63,13 @@ a { color: inherit; }
 .prose h2 { margin: 3rem 0 .7rem; color: var(--crimson); font: 500 2.3rem/1 var(--serif); }
 .prose a { color: var(--crimson); text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
 .site-footer { padding: 2.8rem clamp(1.5rem, 5vw, 5.25rem) 2rem; color: rgba(244,215,157,.82); background: var(--crimson-deep); border-top: 1px solid rgba(231,186,109,.35); font-size: .68rem; letter-spacing: .08em; }
-.site-footer__partners { padding-bottom: 2.1rem; border-bottom: 1px solid rgba(231,186,109,.22); }
+.site-footer__partners { padding-bottom: 2.1rem; border-bottom: 1px solid rgba(231,186,109,.22); text-align: center; }
 .site-footer__label { margin: 0 0 1.1rem; color: var(--gold); font-size: .63rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
-.partner-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem clamp(1.5rem, 4vw, 4rem); }
+.partner-logos { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1.5rem clamp(1.5rem, 4vw, 4rem); }
 .partner-logo { display: inline-flex; align-items: center; min-height: 2.5rem; transition: opacity .2s ease, transform .2s ease; }
 .partner-logo:hover { opacity: .72; transform: translateY(-2px); }
 .partner-logo img { display: block; width: auto; height: 2.2rem; max-width: 9rem; object-fit: contain; opacity: .92; }
+.partner-logo--upc img { height: 1.85rem; }
 .site-footer__bottom { display: grid; grid-template-columns: 1fr 1fr auto; gap: 2rem; align-items: end; padding-top: 2rem; }
 .site-footer p { margin: 0; }
 .site-footer__brand { display: flex; flex-direction: column; gap: .3rem; color: var(--gold-pale); font-family: var(--serif); font-size: 1.2rem; }

@@ -40,11 +40,6 @@ body_classes: downloads
     </article>
   </section>
 
-  <div class="download-foot">
-    <p>Vous cherchez une autre version ou les notes de mise à jour ?</p>
-    <a class="text-link" data-release-page href="https://github.com/lejeanbaptiste/lejeanbaptiste/releases">Voir toutes les versions <span aria-hidden="true">↗</span></a>
-  </div>
-
   <section class="integrations-section" aria-labelledby="integrations-title">
     <div class="integrations-heading">
       <p class="eyebrow">Autour de Grognard</p>
