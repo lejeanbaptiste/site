@@ -1,0 +1,12 @@
+{% extends 'default.html.twig' %}
+
+{% block main %}
+  <main class="guide-detail">
+    <article class="guide-detail__article">
+      <p class="eyebrow">Guide · {{ page.title }}</p>
+      <div class="prose">
+        {{ page.content|raw }}
+      </div>
+    </article>
+  </main>
+{% endblock %}
