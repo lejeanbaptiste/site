@@ -29,7 +29,7 @@ Par exemple :
 
 Le texte visible reste `張衡`. L’attribut `@key` indique la fiche à consulter ; celle-ci peut contenir ses variantes, ses dates, ses notes et ses liens vers des autorités.
 
-Les **packs d’autorités** — Wikidata, VIAF, BnF, CBDB, DILA, BDRC, Norbert et d’autres — sont des données de référence utilisées lors des recherches. Ils ne constituent pas votre catalogue : votre base conserve les décisions, les compléments et les notes propres à votre projet.
+Les **packs d’autorités** — Wikidata, VIAF, BnF/NDL, CBDB, DILA, CHGIS, BDRC (via Wikidata), Norbert et d’autres — sont des données de référence utilisées lors des recherches. Ils ne constituent pas votre catalogue : votre base conserve les décisions, les compléments et les notes propres à votre projet.
 
 ## 2. Où se trouve la base ?
 
@@ -60,7 +60,7 @@ Le panneau **Attributs** montre l’identifiant porté par la balise ; la fiche 
 
 ## 4. Relier les autorités
 
-Une fiche peut porter plusieurs liens d’autorité. Les concordances entre Wikidata, VIAF, BnF, CBDB, DILA, BDRC ou d’autres catalogues sont normales : aucune source n’est complète et chacune possède son propre système d’identifiants.
+Une fiche peut porter plusieurs liens d’autorité. Les concordances entre Wikidata, VIAF, BnF, CBDB, DILA, CHGIS, BDRC ou d’autres catalogues sont normales : aucune source n’est complète et chacune possède son propre système d’identifiants.
 
 Les packs de ressources s’installent depuis **Paramètres → Packs de ressources**. Ils alimentent les recherches, le balisage par liste et les propositions de désambiguïsation. Le panneau de base de données peut aussi rétro-remplir certaines fiches avec des noms ou des informations disponibles dans les packs installés. Cette opération est facultative : relisez les données rapportées avant de les conserver comme informations de votre projet.
 

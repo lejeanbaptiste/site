@@ -38,13 +38,13 @@ Les fichiers compagnons de traduction suivent la source lorsqu’elle est renomm
 
 Dans le **panneau de navigation des fichiers**, un clic gauche ouvre un document. Un clic droit ouvre un menu contextuel qui permet de le renommer, de le déplacer ou de le supprimer.
 
-Pour créer un document, utilisez **File → New File** ou <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd>. Grognard part du squelette correspondant au schéma actif ; lors du premier enregistrement, choisissez un nom et un emplacement à l’intérieur du projet.
+Pour créer un document, utilisez **Fichier → Nouveau fichier** ou <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd>. Grognard part du squelette correspondant au schéma actif ; lors du premier enregistrement, choisissez un nom et un emplacement à l’intérieur du projet.
 
 Le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd> enregistre le document courant. Plusieurs documents peuvent rester ouverts dans des onglets : fermer un onglet ne ferme pas le projet et ne supprime pas le fichier.
 
 ## 3. Importer des fichiers locaux
 
-Choisissez **File → Import Documents** pour importer un fichier, plusieurs fichiers ou un dossier. Grognard peut convertir notamment des fichiers TXT, Markdown, RTF, Word (`.docx`), ODT et XML vers la structure du projet.
+Choisissez **Fichier → Importer des documents** pour importer un fichier, plusieurs fichiers ou un dossier. Grognard peut convertir notamment des fichiers TXT, Markdown, RTF, Word (`.docx`), ODT et XML vers la structure du projet.
 
 La conversion reconnaît les paragraphes et certaines structures élémentaires. Elle ne remplace pas le travail éditorial : elle ne décide pas à votre place du balisage précis, des identifiants d’entités ou des corrections de la source.
 
@@ -58,7 +58,7 @@ Après tout import, ouvrez au moins un résultat en vue visuelle et contrôlez l
 
 ### Wikisource
 
-La commande **File → Import from Wikisource…** permet de choisir ou de coller une page et d’en écrire une version TEI dans le projet. Elle fonctionne sans extension de navigateur.
+La commande **Fichier → Importer depuis Wikisource…** permet de choisir ou de coller une page et d’en écrire une version TEI dans le projet. Elle fonctionne sans extension de navigateur.
 
 L’extension Grognard pour navigateur est un raccourci pratique pour envoyer des pages Wikisource, Kanripo ou BDRC vers l’application. Pour l’installer, consultez les instructions de la page [Télécharger](/download). Démarrez Grognard au moins une fois afin que la messagerie native soit enregistrée.
 
@@ -66,7 +66,7 @@ Dans Chromium, chargez l’extension décompressée depuis la page des extension
 
 ## 5. Les plugins d’importation
 
-Les commandes de corpus apparaissent dans le menu **File** seulement après l’activation du plugin correspondant dans **Paramètres → Plugins**. Grognard peut proposer les packs et plugins adaptés lorsque vous ouvrez pour la première fois un projet en chinois, en chinois classique ou en tibétain.
+Les commandes de corpus apparaissent dans le menu **Fichier** seulement après l’activation du plugin correspondant dans **Paramètres → Plugins**. Grognard peut proposer les packs et plugins adaptés lorsque vous ouvrez pour la première fois un projet en chinois, en chinois classique ou en tibétain.
 
 | Plugin | Pour quel usage ? | Résultat |
 | --- | --- | --- |
@@ -89,7 +89,7 @@ Enregistrez après une série de décisions cohérentes, avant une recherche-rem
 
 Le menu **Time Machine** de Grognard conserve des instantanés et permet de restaurer un fichier ou un état du projet. Il s’agit de l’historique de Grognard, pas de l’application Time Machine d’Apple. Une restauration de projet et une restauration de fichier ne portent pas sur le même périmètre.
 
-Les instantanés sont créés après un enregistrement réussi lorsqu’un fichier a réellement changé ; les réenregistrements identiques ne remplissent donc pas l’historique. **File → History…** restaure un fichier, tandis que **Project → Rollback…** restaure plusieurs fichiers à un état donné. L’historique est local, dédoublonné et soumis à des limites de rétention : il complète Git ou une copie externe, mais ne les remplace pas.
+Les instantanés sont créés après un enregistrement réussi lorsqu’un fichier a réellement changé ; les réenregistrements identiques ne remplissent donc pas l’historique. **Fichier → Historique…** restaure un fichier, tandis que **Projet → Restaurer…** restaure plusieurs fichiers à un état donné. L’historique est local, dédoublonné et soumis à des limites de rétention : il complète Git ou une copie externe, mais ne les remplace pas.
 
 Si la base d’entités centrale se trouve en dehors du projet, restaurer les textes ne restaure pas automatiquement cette base — et inversement. Un document peut alors contenir des clés qui ne correspondent plus à l’état de la base : laissez les fichiers intacts et restaurez la bonne copie de la base séparément.
 
@@ -103,7 +103,7 @@ Après une erreur sérieuse, arrêtez-vous. Notez le fichier et l’opération c
 
 ## 7. Exporter et partager
 
-La commande **File → Export Document…** produit une vue exportée du document selon les formats proposés par la version installée. Elle ne remplace pas le dossier du projet : les traductions, le schéma, les entités et l’historique n’y sont pas nécessairement inclus.
+La commande **Fichier → Exporter le document…** produit une vue exportée du document selon les formats proposés par la version installée. Elle ne remplace pas le dossier du projet : les traductions, le schéma, les entités et l’historique n’y sont pas nécessairement inclus.
 
 Pour partager un projet avec un collègue, compressez son dossier entier et joignez une note indiquant le schéma utilisé, la version de Grognard et, si nécessaire, la manière d’accéder à la base d’entités. Le complément pour Word, LibreOffice ou OnlyOffice est un outil de rédaction et non une méthode d’export ; consultez à ce sujet les [fonctions de base](/guide/fonctions-de-base).
 

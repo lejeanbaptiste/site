@@ -11,6 +11,8 @@ Les fonctions avancées ne concernent pas seulement le XML. Elles donnent accès
 
 Pour ouvrir les réglages, utilisez **Paramètres** ou le raccourci <kbd>⌘</kbd> + <kbd>,</kbd>. L’onglet **Projet** concerne le dossier ouvert ; les autres onglets concernent généralement cette machine, cet utilisateur ou l’application.
 
+<a id="editeur-xml"></a>
+
 ## 1. L’éditeur XML Monaco
 
 La **vue Source** repose sur Monaco Editor, le même éditeur de code que celui qui équipe Visual Studio Code. Elle affiche le XML du document avec une coloration syntaxique, une indentation lisible et des repères qui permettent de suivre l’arbre des éléments.
@@ -72,6 +74,8 @@ Les garde-fous existent parce qu’un remplacement global ou une automatisation 
 
 Laissez désactivés les avertissements qui suppriment les confirmations de suppression ou de détachement d’une autorité. Une confirmation de plus coûte moins cher qu’une fiche ou qu’un dossier supprimé par erreur.
 
+<a id="traduction"></a>
+
 ## 6. Régler la traduction
 
 Dans **Paramètres → Politique de traduction**, les préréglages par langue déterminent la manière dont Grognard affiche les entités dans le panneau de traduction. Ils peuvent régler l’ordre de la translittération et de la traduction des titres, la présentation des dates de naissance, de décès, des dates approximatives et des ères, ainsi que l’usage des crochets.
@@ -81,6 +85,8 @@ Ces réglages sont précisément la raison pour laquelle la désambiguïsation e
 Pour les dates est-asiatiques, les outils de Sanmiao et le plugin correspondant aident à conserver une conversion traçable. Ils ne remplacent pas la formulation originale de la source. Les notes et l’intégration Zotero restent des fonctions du panneau de traduction ; utilisez-les selon l’état de votre version installée.
 
 LanguageTool est une aide facultative, réglable dans **Paramètres → IA → LanguageTool**. Grognard peut installer une copie locale gérée, qui nécessite [Java 17 ou une version ultérieure](https://adoptium.net/temurin/releases/), ou utiliser l’adresse d’un serveur que vous administrez. Le mode **À la demande** vérifie le texte lorsque vous le demandez ; le mode **Direct** souligne les problèmes pendant la saisie. Les données n-grammes sont optionnelles et peuvent être volumineuses. Un serveur distant reçoit le texte vérifié : consultez la [politique de confidentialité](/privacy) et choisissez un service auquel vous faites confiance.
+
+<a id="ia"></a>
 
 ## 7. L’IA : ce qu’elle voit
 

@@ -33,7 +33,7 @@ Grognard est une application de bureau : vos fichiers et vos données restent su
 
 ## 2. Mises à jour
 
-Sous Windows et macOS, l’application Grognard reçoit et applique automatiquement les mises à jour pendant son utilisation. Sous Linux, téléchargez le paquet `.deb` mis à jour depuis la page [Télécharger](/download) (Debian et Ubuntu). Le contenu de ces mises à jour est documenté dans les [notes de version](https://github.com/lejeanbaptiste/lejeanbaptiste/releases).
+Sous Windows et macOS, l’application Grognard reçoit et applique automatiquement les mises à jour pendant son utilisation. Sous Linux, téléchargez le paquet `.deb` mis à jour depuis la page [Télécharger](/download) (Debian et Ubuntu). Le contenu de ces mises à jour est documenté dans les [notes de version](https://github.com/grognard/grognard/releases).
 
 ## 3. Créer ou ouvrir un projet
 
@@ -101,11 +101,11 @@ Cliquez sur l’icône du **panneau de traduction** <img class="guide-ui-icon" s
 
 Grognard conserve les traductions séparément de la source principale, tout en les attachant au même texte source. Vous pouvez ainsi rédiger plusieurs traductions parallèles, dans plusieurs langues, sans dupliquer ni modifier la source.
 
-Le panneau de traduction intègre un correcteur orthographique et grammatical fourni par LanguageTool. La vérification grammaticale nécessite l’installation de Java. Pour en savoir plus sur les aides linguistiques, consultez la partie consacrée aux [fonctions avancées](/guide#traduire).
+Le panneau de traduction intègre un correcteur orthographique et grammatical fourni par LanguageTool. La vérification grammaticale nécessite l’installation de Java. Pour en savoir plus sur les aides linguistiques, consultez les [fonctions avancées](/guide/fonctions-avancees#traduction).
 
 Vous y trouverez également les fonctions essentielles d’un traitement de texte pour produire une traduction savante : mise en forme, notes de bas de page et intégration avec Zotero.
 
-Si vous disposez d’une clé d’API, le panneau de traduction peut aussi générer une proposition de traduction à l’aide d’un service d’IA. Cette fonction est facultative ; son fonctionnement et ses précautions sont présentés dans les [fonctions avancées](/guide#traduire).
+Si vous disposez d’une clé d’API, le panneau de traduction peut aussi générer une proposition de traduction à l’aide d’un service d’IA. Cette fonction est facultative ; son fonctionnement et ses précautions sont présentés dans les [fonctions avancées](/guide/fonctions-avancees#ia).
 
 ## 7. Baliser le texte
 
@@ -167,7 +167,7 @@ Lorsque vous rédigez un article, ressaisir et mettre en forme les noms, les sin
 
 Les outils d’IA traduisent de mieux en mieux les textes historiques. Ils traitent cependant souvent de manière superficielle, voire trompeuse, les données qui nous sont les plus précieuses : l’identification, la compréhension, la traduction exacte et la mise en forme des dates, des noms propres et des titres. Une fois le texte balisé et désambiguïsé, Grognard remplace les entités par des variables dans le texte soumis à l’IA. Celle-ci traduit le texte autour de ces variables, puis Grognard réinsère les entités sous forme de champs. Vous pouvez ainsi définir la traduction et la mise en forme à appliquer à l’ensemble de votre corpus, sans laisser le modèle réécrire vos données sensibles.
 
-Pour les textes chinois et japonais, les dates peuvent être traitées avec une précision particulière grâce à une version locale de [Sanmiao](https://norbert.huma-num.fr/app/sanmiao/index.html?lang=fr), convertisseur conçu pour les exigences scientifiques de l’histoire de l’astronomie.
+Pour les textes chinois et japonais, les dates peuvent être traitées avec une précision particulière grâce à une version locale de [Sanmiao](https://github.com/PotatoSinology/sanmiao) (Daniel Patrick Morgan), convertisseur conçu pour les exigences scientifiques de l’histoire de l’astronomie.
 
 Les titres officiels bénéficient d’un traitement comparable. Grognard ne redistribue pas le dictionnaire de Hucker ni ses traductions. Lorsque les packs sinologiques s’appuient sur des données auxquelles ils peuvent légalement accéder, celles-ci sont exploitées localement pour produire des ressources de travail. Les systèmes **HuckBot5000** (anglais) et **MaxiRicci7000** (français) sont des modèles et des algorithmes entraînés pour prolonger cette méthode de traduction « à la Hucker » ; ils ne sont pas une redistribution du dictionnaire lui-même. Une fois les titres balisés et désambiguïsés, ils peuvent donc être traduits de manière homogène à l’échelle du corpus.
 
