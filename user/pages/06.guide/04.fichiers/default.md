@@ -3,7 +3,7 @@ title: Fichiers
 menu: Fichiers
 visible: false
 template: guide-detail
-guide_portrait: guide-files.png
+guide_portrait: guide-files.webp
 guide_intro: "Comprendre ce qui entre dans un projet, importer des sources et protéger votre travail."
 guide_toc:
   - { id: projet, label: Contenu d’un projet }

@@ -3,7 +3,7 @@ title: Fonctions avancées
 menu: Fonctions avancées
 visible: false
 template: guide-detail
-guide_portrait: guide-advanced.png
+guide_portrait: guide-advanced.webp
 guide_intro: "Les outils qui donnent davantage de contrôle sur la structure, les corpus et les services connectés."
 guide_toc:
   - { id: editeur-xml, label: Éditeur XML }

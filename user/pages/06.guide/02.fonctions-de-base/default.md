@@ -3,7 +3,7 @@ title: Fonctions de base
 menu: Fonctions de base
 visible: false
 template: guide-detail
-guide_portrait: guide-basic.png
+guide_portrait: guide-basic.webp
 guide_intro: "De l’installation au premier document XML enregistré et validé."
 guide_toc:
   - { id: installer, label: Installer }

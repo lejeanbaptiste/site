@@ -291,7 +291,7 @@ a { color: inherit; }
 .guide-feature-grid { display: grid; width: 90%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-self: center; justify-self: end; }
 .guide-feature-card { min-width: 0; margin: 0; color: inherit; text-decoration: none; }
 .guide-feature-card figure { margin: 0; }
-.guide-feature-card img { display: block; width: 100%; aspect-ratio: 1 / 1.12; object-fit: cover; object-position: center; border: 1px solid rgba(231,186,109,.42); }
+.guide-feature-card img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1.12; object-fit: cover; object-position: center; border: 1px solid rgba(231,186,109,.42); }
 .guide-feature-card figcaption { padding-top: .65rem; color: var(--gold-pale); font-size: .68rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 .guide-anchors { display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; margin-top: .35rem; padding-top: .45rem; border-top: 1px solid rgba(231,186,109,.4); grid-column: 1 / -1; }
 .guide-anchors a { color: var(--gold-pale); font-size: .66rem; letter-spacing: .11em; text-decoration: none; text-transform: uppercase; }

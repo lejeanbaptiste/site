@@ -3,7 +3,7 @@ title: Base de données
 menu: Base de données
 visible: false
 template: guide-detail
-guide_portrait: guide-database.png
+guide_portrait: guide-database.webp
 guide_intro: "Un catalogue local pour les entités, leurs variantes, leurs autorités et les décisions de votre édition."
 guide_toc:
   - { id: distinguer, label: Deux choses à distinguer }
