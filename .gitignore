@@ -38,7 +38,3 @@
 /public/
 **/.DS_Store
 *.swp
-
-# local-only image working dirs
-/images/src/
-/images/build/
