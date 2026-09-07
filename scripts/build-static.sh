@@ -48,6 +48,11 @@ rm -rf "$GRAV_DIR"/user/plugins/admin \
 rm -rf "$GRAV_DIR/user/pages" "$GRAV_DIR/user/themes"
 rsync -a --exclude='.DS_Store' user/ "$GRAV_DIR/user/"
 
+# Publish the repo's top-level images/ (screenshots, page splashes) at /images/.
+# Pages reference these as /images/<file>; php -S serves the real file before it
+# ever reaches system/router.php, so they just need to exist in the build tree.
+rsync -a --exclude='.DS_Store' images/ "$GRAV_DIR/images/"
+
 # 3. Build-time config. Written into the throwaway build tree only - the
 #    committed user/config/*.yaml are never modified.
 mkdir -p "$GRAV_DIR/user/config"
