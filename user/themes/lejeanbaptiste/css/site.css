@@ -64,7 +64,7 @@ a { color: inherit; }
 .page-content article { max-width: 43rem; }
 .comparison-page .page-content--standard { padding-right: max(1.5rem, calc((100vw - 72rem) / 2)); padding-left: max(1.5rem, calc((100vw - 72rem) / 2)); }
 .comparison-page .page-content article { max-width: 72rem; }
-.comparison-hero { position: relative; min-height: clamp(28rem, 32vw, 31rem); overflow: hidden; background: var(--paper) url('/images/tool_splash.png') right top / auto clamp(28rem, 32vw, 31rem) no-repeat; }
+.comparison-hero { position: relative; min-height: clamp(28rem, 32vw, 31rem); overflow: hidden; background-color: var(--paper); background-position: right top; background-size: auto clamp(28rem, 32vw, 31rem); background-repeat: no-repeat; }
 .comparison-hero::before { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(244,234,214,.98) 0%, rgba(244,234,214,.94) 32%, rgba(244,234,214,.55) 51%, rgba(244,234,214,0) 74%); content: ''; }
 .comparison-hero__copy { position: relative; z-index: 1; width: min(53rem, 62%); padding: clamp(3rem, 6vw, 6rem) 1.5rem clamp(3rem, 6vw, 6rem) max(1.5rem, calc((100vw - 72rem) / 2)); }
 .comparison-hero__copy .eyebrow { color: var(--crimson); }
@@ -75,7 +75,7 @@ a { color: inherit; }
 .comparison-page main.comparison-page-main .comparison-pillars { margin-top: 0; }
 .comparison-content .prose > p:first-of-type { max-width: none; font-size: inherit; line-height: inherit; }
 
-.resources-hero { position: relative; min-height: clamp(28rem, 32vw, 31rem); overflow: hidden; background: var(--paper) url('/images/ressources_splash.png') right top / auto clamp(28rem, 32vw, 31rem) no-repeat; }
+.resources-hero { position: relative; min-height: clamp(28rem, 32vw, 31rem); overflow: hidden; background-color: var(--paper); background-position: right top; background-size: auto clamp(28rem, 32vw, 31rem); background-repeat: no-repeat; }
 .resources-hero::before { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(244,234,214,.98) 0%, rgba(244,234,214,.94) 32%, rgba(244,234,214,.55) 51%, rgba(244,234,214,0) 74%); content: ''; }
 .resources-hero__copy { position: relative; z-index: 1; width: min(53rem, 62%); padding: clamp(3rem, 6vw, 6rem) 1.5rem clamp(3rem, 6vw, 6rem) max(1.5rem, calc((100vw - 72rem) / 2)); }
 .resources-hero__copy .eyebrow { color: var(--crimson); }
@@ -85,7 +85,7 @@ a { color: inherit; }
 .resources-hero__intro p { margin: 0; font: inherit; }
 .comparison-page main.resources-page-main .resources-content { padding-top: 0; }
 
-.project-hero { position: relative; min-height: clamp(28rem, 32vw, 31rem); overflow: hidden; background: var(--paper) url('/images/project_splash.png') right top / auto clamp(28rem, 32vw, 31rem) no-repeat; }
+.project-hero { position: relative; min-height: clamp(28rem, 32vw, 31rem); overflow: hidden; background-color: var(--paper); background-position: right top; background-size: auto clamp(28rem, 32vw, 31rem); background-repeat: no-repeat; }
 .project-hero::before { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(244,234,214,.98) 0%, rgba(244,234,214,.94) 32%, rgba(244,234,214,.55) 51%, rgba(244,234,214,0) 74%); content: ''; }
 .project-hero__copy { position: relative; z-index: 1; width: min(53rem, 62%); padding: clamp(3rem, 6vw, 6rem) 1.5rem clamp(3rem, 6vw, 6rem) max(1.5rem, calc((100vw - 72rem) / 2)); }
 .project-hero__copy .eyebrow { color: var(--crimson); }
