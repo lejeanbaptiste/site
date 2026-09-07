@@ -17,11 +17,6 @@ guide_toc:
   - { id: pourquoi-faire, label: Pourquoi faire ? }
 ---
 
-<figure class="guide-inline-visual">
-  <img src="/user/themes/lejeanbaptiste/images/screenshot-workspace.png" alt="Vue de travail de Grognard avec un document ouvert">
-  <figcaption><span>01</span> Le projet et le document au même endroit</figcaption>
-</figure>
-
 <p><a class="text-link" href="/guide">← Retour au guide</a></p>
 
 <a id="installer"></a>
@@ -54,9 +49,19 @@ Pour commencer à éditer des documents, vous devez d’abord créer un projet o
 
 Un projet n’est pas un simple fichier XML : c’est un dossier sur votre ordinateur qui rassemble les textes, le schéma, les traductions et la base de données des entités. C’est en ouvrant ce dossier comme projet que Grognard peut maintenir les liens entre ces différents éléments.
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_schema_select.png"><img src="/images/screenshot_disambiguation_schema_select.png" alt="Dialogue de choix du schéma, ici TEI All"></a>
+  <figcaption>Choisir le schéma du projet</figcaption>
+</figure>
+
 Lorsque vous créez un nouveau projet, Grognard vous demande de choisir un schéma. Sauf si vous prévoyez de travailler de manière approfondie sur des textes bouddhiques de CBETA, ou si vous avez une autre raison précise de choisir une configuration particulière, sélectionnez le schéma par défaut : `TEI-ALL`.
 
 Un schéma est la grammaire de votre document : il définit les balises et les attributs autorisés, ainsi que la manière dont ils peuvent s’organiser. `TEI-ALL` est le schéma général proposé par défaut ; il convient à la plupart des projets.
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_project_settings.png"><img src="/images/screenshot_disambiguation_project_settings.png" alt="Paramètres du projet : langue source, base d’entités, traduction"></a>
+  <figcaption>Langue, entités, traduction</figcaption>
+</figure>
 
 Grognard vous demande ensuite de définir les paramètres du corpus du projet. Les plus importants sont les suivants :
 
@@ -73,6 +78,11 @@ La première fois que vous créez ou ouvrez un projet dans une langue donnée, G
 ## 4. Ouvrir un document
 
 Lorsque vous ouvrez un projet existant, ouvrez le **panneau de navigation des fichiers** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tab_explorer.png" alt="Explorateur de fichiers"> pour parcourir votre corpus. Un clic gauche ouvre un fichier. Un clic droit ouvre un menu contextuel qui permet de le renommer, de le déplacer ou de le supprimer.
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_new_doc.png"><img src="/images/screenshot_disambiguation_new_doc.png" alt="Création d’un nouveau document dans Grognard"></a>
+  <figcaption>Créer un nouveau document</figcaption>
+</figure>
 
 Pour créer un nouveau fichier dans le projet courant, utilisez le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd>, ou choisissez **Fichier → Nouveau fichier**. Grognard crée le document à partir du squelette correspondant au schéma du projet. Lors du premier enregistrement, choisissez son nom et son emplacement dans le dossier du projet.
 
@@ -105,13 +115,13 @@ Dans un texte comportant des corrections éditoriales, utilisez le bouton d’af
 
 Pour protéger la source, cliquez sur le bouton **Verrouiller le texte** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/lock-open.png" alt="Verrouiller le texte">. Le texte ne peut alors plus être saisi ni supprimé, tandis que les opérations de balisage restent disponibles. L’icône devient un cadenas fermé <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/lock.png" alt="Texte verrouillé">. Vous pourrez le déverrouiller lorsque vous devrez reprendre la transcription.
 
-<figure class="guide-inline-visual">
-  <img src="/user/themes/lejeanbaptiste/images/screenshot-entities.png" alt="Panneau de recherche et d’identification des entités dans Grognard">
-  <figcaption><span>02</span> Distinguer le texte et ses entités</figcaption>
-</figure>
-
 <a id="traduction"></a>
 ## 6. Traduire dans le panneau de traduction
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_translation.png"><img src="/images/screenshot_translation.png" alt="Panneau de traduction à côté du texte source"></a>
+  <figcaption>Le panneau de traduction</figcaption>
+</figure>
 
 Cliquez sur l’icône du **panneau de traduction** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/translate.png" alt="Traduction"> pour l’ouvrir.
 
@@ -126,11 +136,21 @@ Si vous disposez d’une clé d’API, le panneau de traduction peut aussi gén�
 <a id="balisage"></a>
 ## 7. Baliser le texte
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_tagging_manual.png"><img src="/images/screenshot_tagging_manual.png" alt="Sélection d’un passage et choix d’une balise dans Grognard"></a>
+  <figcaption>Balisage manuel</figcaption>
+</figure>
+
 Grognard est avant tout un outil de balisage XML destiné à l’extraction et à l’analyse des données en humanités numériques. Il automatise toutefois les opérations fastidieuses de ce travail et rend immédiatement utiles les balises que vous ajoutez.
 
 Même si votre objectif n’est pas de transformer votre texte en données structurées, il est utile d’en identifier les principales entités : personnes, lieux, œuvres, dates, organisations et titres officiels. Vous pouvez le faire manuellement en sélectionnant un mot, en appuyant sur <kbd>Entrée</kbd>, puis en choisissant la catégorie correspondante. Vous pouvez également automatiser l’opération avec le bouton **Balisage automatique** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tag-plus.png" alt="Balisage automatique">, qui propose de traiter l’ensemble du texte.
 
 ### Le « tag bomb »
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_tagging_bomb.png"><img src="/images/screenshot_tagging_bomb.png" alt="Fenêtre de configuration du balisage automatique par listes"></a>
+  <figcaption>Balisage par listes</figcaption>
+</figure>
 
 Le premier mode d’auto-balisage, le « tag bomb », recherche mécaniquement dans le texte toutes les occurrences des mots présents dans votre base personnelle, dans les tables fournies par Grognard et dans les packs de ressources linguistiques. Ces listes peuvent contenir des milliers d’entrées. Les packs sont constitués à partir de bases d’autorités ouvertes : Wikidata, la BnF/NDL, CBDB, DILA, CHGIS, VIAF, BDRC et Norbert.
 
@@ -140,7 +160,17 @@ Le second mode, **Suggestions par IA**, transmet votre source à un modèle de l
 
 ### Valider les propositions
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_tagging_validation.png"><img src="/images/screenshot_tagging_validation.png" alt="Panneau de validation des suggestions de balisage"></a>
+  <figcaption>Relire les suggestions</figcaption>
+</figure>
+
 Après l’auto-balisage, Grognard vous demande de valider les résultats afin d’écarter les faux positifs. La vérification est conçue pour rester rapide : appuyez sur <kbd>Entrée</kbd> pour accepter, sur <kbd>Retour arrière</kbd> pour refuser, sur <kbd>Maj</kbd> + <kbd>Entrée</kbd> pour accepter toutes les occurrences et sur <kbd>Maj</kbd> + <kbd>Retour arrière</kbd> pour les refuser toutes.
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_highlighting.png"><img src="/images/screenshot_highlighting.png" alt="Panneau de réglage des couleurs des balises"></a>
+  <figcaption>Lire les balises visuellement</figcaption>
+</figure>
 
 Une fois les éléments de base identifiés, ouvrez le **panneau CSS** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tab_highlight.png" alt="CSS">. Vous pourrez y choisir les couleurs du texte et des surlignages afin de distinguer visuellement les différentes catégories d’entités.
 
@@ -157,27 +187,44 @@ C’est précisément ce que Grognard fait pour vous. L’application crée une 
 
 ### Faire le lien
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation.png"><img src="/images/screenshot_disambiguation.png" alt="Panneau Désambiguïser avec des candidats à comparer"></a>
+  <figcaption>Comparer les candidats</figcaption>
+</figure>
+
 Après avoir balisé une mention, cliquez sur **Désambiguïser** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/disambiguate.png" alt="Désambiguïsation">. Pour chaque forme balisée, Grognard vous propose les entités correspondantes dans les autorités activées dans vos paramètres. Examinez les propositions — notamment lorsqu’il existe des homonymes — puis choisissez la bonne entité. Si aucune proposition ne convient, créez une nouvelle entité dans votre base.
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_lookup.png"><img src="/images/screenshot_lookup.png" alt="Recherche d’une entité dans les autorités"></a>
+  <figcaption>Rechercher dans les autorités</figcaption>
+</figure>
+
 Vous pouvez aussi effectuer cette recherche depuis le panneau **Attributs** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/label.png" alt="Attributs">. Le lien est enregistré dans le document sous la forme d’un attribut d’identification, tandis que la fiche complète de l’entité reste dans la base du projet.
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_map.png"><img src="/images/screenshot_disambiguation_map.png" alt="Carte de désambiguïsation des lieux"></a>
+  <figcaption>Comparer les lieux sur la carte</figcaption>
+</figure>
+
+Les lieux proches peuvent aussi se comparer sur une carte, lorsque le type d’entité s’y prête.
 
 <a id="pourquoi-faire"></a>
 ## 9. Pourquoi faire ?
 
 ### 1. Une base de données pour le reste
 
-<figure class="guide-inline-visual">
-  <img src="/user/themes/lejeanbaptiste/images/11_database_viewer.png" alt="Base de données des entités dans Grognard">
-  <figcaption><span>04</span> Consulter et enrichir vos entités</figcaption>
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_db_viewer.png"><img src="/images/screenshot_db_viewer.png" alt="Fenêtre de la base d’entités"></a>
+  <figcaption>Consulter vos fiches</figcaption>
 </figure>
 
 Une fois une balise désambiguïsée, il n’est plus nécessaire de repartir de Google pour retrouver les informations sur une personne, un ouvrage, un toponyme ou une autre entité. Les données de base, les variantes et les liens vers les autorités sont centralisés dans votre propre base, consultable hors connexion. Le panneau **Base d’entités** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/database.png" alt="Base d’entités"> vous permet également d’ajouter des notes à chaque fiche, à l'instar de Zotero — mais pas juste pour les ouvrages.
 
 ### 2. Une extension pour les traitements de texte
 
-<figure class="guide-inline-visual">
-  <img src="/user/themes/lejeanbaptiste/images/12_word_plugin.png" alt="Extension Grognard pour un traitement de texte">
-  <figcaption><span>05</span> Réutiliser vos entités dans vos articles</figcaption>
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_word_plugin.png"><img src="/images/screenshot_word_plugin.png" alt="Extension Grognard dans un traitement de texte"></a>
+  <figcaption>Réutiliser vos entités dans Word</figcaption>
 </figure>
 
 Lorsque vous rédigez un article, ressaisir et mettre en forme les noms, les sinogrammes, les traductions et les dates de chaque entité peut être aussi fastidieux que l’étaient autrefois les bibliographies. L’extension Grognard pour **Word** (version de bureau, encore expérimentale) automatise ce travail à partir de votre base d’entités, « à la Zotero ». Les intégrations **LibreOffice** et **OnlyOffice** sont prévues, mais ne sont pas encore distribuées.

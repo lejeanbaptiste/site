@@ -25,6 +25,14 @@
     </main>{% endblock %}
     {% include 'partials/footer.html.twig' %}
   </div>
+  <div class="screenshot-viewer" data-screenshot-viewer hidden>
+    <button class="screenshot-viewer__close" type="button" data-screenshot-close aria-label="Fermer l’image">×</button>
+    <figure class="screenshot-viewer__figure">
+      <img data-screenshot-viewer-image src="" alt="">
+      <figcaption data-screenshot-viewer-caption></figcaption>
+    </figure>
+  </div>
+  {% do assets.addJs('theme://js/screenshot-viewer.js', {group: 'bottom'}) %}
   {{ assets.js('bottom')|raw }}
 </body>
 </html>

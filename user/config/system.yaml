@@ -12,7 +12,7 @@ cache:
 assets:
   css_pipeline: false
   js_pipeline: false
-  enable_asset_timestamp: false
+  enable_asset_timestamp: true
 
 errors:
   display: true

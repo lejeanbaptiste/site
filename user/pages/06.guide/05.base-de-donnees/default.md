@@ -54,18 +54,23 @@ Dans **Paramètres → Base d’entités**, vous pouvez consulter l’emplacemen
 <a id="consulter"></a>
 ## 3. Ouvrir et consulter le catalogue
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_db_viewer.png"><img src="/images/screenshot_db_viewer.png" alt="Fenêtre de consultation de la base d’entités de Grognard"></a>
+  <figcaption>Le catalogue à côté du corpus</figcaption>
+</figure>
+
 Le panneau **Base d’entités** donne accès aux fiches associées au projet. La fenêtre de base de données permet de rechercher une fiche, de filtrer les entités par type et, lorsque les deux existent, de distinguer les données **Projet** des données **Centrale**.
 
 Ouvrez une fiche pour consulter son nom principal, ses variantes — nom chinois, translittération, traduction ou autre forme —, son type, ses dates, ses liens d’autorité et sa description. Vous pouvez également ajouter des notes propres à cette entité, à la manière de Zotero, mais pour les personnes, les lieux et les œuvres de votre corpus.
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_db_cart.png"><img src="/images/screenshot_db_cart.png" alt="Fiche d’une entité dans la base de données"></a>
+  <figcaption>Modifier une fiche d’entité</figcaption>
+</figure>
+
 Vous pouvez créer une fiche lorsqu’aucune autorité ne correspond, ou compléter une fiche existante pour les besoins précis de votre édition. Évitez en revanche de créer une deuxième fiche pour la même personne : si deux fiches désignent la même entité, utilisez l’opération de fusion proposée par la fenêtre de base de données.
 
 Le panneau **Attributs** montre l’identifiant porté par la balise ; la fiche complète se trouve dans la base. Modifier l’un sans vérifier l’autre est une cause fréquente de clés orphelines.
-
-<figure class="guide-inline-visual">
-  <img src="/user/themes/lejeanbaptiste/images/11_database_viewer.png" alt="Fenêtre de consultation de la base d’entités de Grognard">
-  <figcaption><span>01</span> Le catalogue à côté du corpus</figcaption>
-</figure>
 
 <a id="autorites"></a>
 ## 4. Relier les autorités

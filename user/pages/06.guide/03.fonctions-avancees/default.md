@@ -24,9 +24,19 @@ Pour ouvrir les réglages, utilisez **Paramètres** ou le raccourci <kbd>⌘</kb
 
 ## 1. L’éditeur XML Monaco
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_monaco.png"><img src="/images/screenshot_disambiguation_monaco.png" alt="Éditeur XML Monaco dans Grognard"></a>
+  <figcaption>Éditer le XML dans Monaco</figcaption>
+</figure>
+
 La **vue Source** repose sur Monaco Editor, le même éditeur de code que celui qui équipe Visual Studio Code. Elle affiche le XML du document avec une coloration syntaxique, une indentation lisible et des repères qui permettent de suivre l’arbre des éléments.
 
 ### L’autocomplétion
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_xml_autofill.png"><img src="/images/screenshot_disambiguation_xml_autofill.png" alt="Suggestions d’autocomplétion XML dans Monaco"></a>
+  <figcaption>Compléter la structure XML</figcaption>
+</figure>
 
 Lorsque vous saisissez une balise, un attribut ou une valeur, Monaco propose les possibilités compatibles avec le contexte du curseur. Les suggestions tiennent compte du schéma actif : elles vous aident à choisir une structure valide sans vous obliger à mémoriser toutes les balises TEI disponibles.
 
@@ -41,18 +51,38 @@ Cette édition liée ne rend pas automatiquement le document valide au regard du
 <a id="valider-remplacer"></a>
 ## 2. Valider et remplacer
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_xml_validation.png"><img src="/images/screenshot_disambiguation_xml_validation.png" alt="Rapport de validation XML dans Grognard"></a>
+  <figcaption>Lire les erreurs de validation</figcaption>
+</figure>
+
 Un XML **bien formé** respecte les règles syntaxiques minimales : les balises sont correctement imbriquées et fermées. Un XML **valide** respecte en plus la grammaire du schéma du projet. Un document peut donc être bien formé tout en contenant une structure que le schéma interdit.
 
 Le panneau **Validation** affiche les erreurs du document. Commencez par la première : les suivantes peuvent être des erreurs en cascade causées par la même faute. La vue visuelle empêche de nombreuses structures invalides ; la vue Source vous donne davantage de liberté, mais aussi davantage de responsabilités.
 
 La recherche et le remplacement <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>F</kbd> peuvent viser le texte visible ou, en mode Source, le balisage lui-même. Dans **Paramètres → Garde-fous**, laissez activé **Exiger un XML bien formé pour Rechercher et remplacer**. Avant un remplacement global, faites un instantané et testez l’opération sur un seul document.
 
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_find_replace.png"><img src="/images/screenshot_find_replace.png" alt="Fenêtre de recherche et remplacement dans Grognard"></a>
+  <figcaption>Rechercher et remplacer avec précaution</figcaption>
+</figure>
+
 <a id="grande-echelle"></a>
 ## 3. Travailler à grande échelle
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_transformation.png"><img src="/images/screenshot_transformation.png" alt="Panneau de transformation avancée des balises"></a>
+  <figcaption>Transformer la structure XML</figcaption>
+</figure>
 
 Le bouton **Transformation avancée des balises** permet de rechercher et de remplacer des éléments ou des attributs dans une structure XML. Il s’agit d’une opération éditoriale sur la structure, pas d’une simple recherche de mots.
 
 Le balisage par liste et les suggestions par IA peuvent également être lancés sur plusieurs fichiers. Activez **Autoriser les modifications automatisées sur plusieurs fichiers** uniquement lorsque vous comprenez le périmètre de l’opération. Créez un instantané **Time Machine** juste avant ; relisez ensuite un échantillon et consultez la validation.
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_xpath.png"><img src="/images/screenshot_xpath.png" alt="Panneau XPath dans Grognard"></a>
+  <figcaption>Interroger le document avec XPath</figcaption>
+</figure>
 
 Le panneau **XPath** sert à poser des questions sur la structure — par exemple « quelles balises `persName` n’ont pas de clé ? » — plutôt qu’à rechercher une simple chaîne de caractères. Les outils d’interface pour afficher les balises, les sauts de page et les notes aident à lire le résultat sans modifier le XML.
 
@@ -94,6 +124,11 @@ Laissez désactivés les avertissements qui suppriment les confirmations de supp
 Dans **Paramètres → Politique de traduction**, les préréglages par langue déterminent la manière dont Grognard affiche les entités dans le panneau de traduction. Ils peuvent régler l’ordre de la translittération et de la traduction des titres, la présentation des dates de naissance, de décès, des dates approximatives et des ères, ainsi que l’usage des crochets.
 
 Ces réglages sont précisément la raison pour laquelle la désambiguïsation est utile : une fiche correctement identifiée peut être rendue de manière homogène dans tout le corpus, sans ressaisie manuelle à chaque occurrence. Le texte original reste conservé ; la politique règle sa présentation dans la traduction.
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_sanmiao.png"><img src="/images/screenshot_sanmiao.png" alt="Outil de conversion des dates Sanmiao"></a>
+  <figcaption>Convertir les dates avec Sanmiao</figcaption>
+</figure>
 
 Pour les dates est-asiatiques, les outils de Sanmiao et le plugin correspondant aident à conserver une conversion traçable. Ils ne remplacent pas la formulation originale de la source. Les notes et l’intégration Zotero restent des fonctions du panneau de traduction ; utilisez-les selon l’état de votre version installée.
 
