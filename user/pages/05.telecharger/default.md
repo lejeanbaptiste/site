@@ -8,14 +8,13 @@ body_classes: downloads
 <div class="download-page" data-release-repo="grognard/grognard">
   <p class="download-meta" aria-live="polite">Télécharger Grognard <span aria-hidden="true">·</span> <strong data-release-version>Recherche de la version…</strong></p>
   <p class="download-meta">Logiciel libre distribué sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3</a>.</p>
-  <p class="download-notice"><strong>Version bêta.</strong> Grognard est encore en développement et certaines fonctions peuvent évoluer. <a href="https://github.com/grognard/grognard/issues">Signaler un problème sur GitHub</a>.</p>
-  <p class="download-notice">Le classement est facultatif ; vos textes et vos fichiers restent sur votre ordinateur.</p>
+  <p class="download-notice">Grognard est encore en développement et certaines fonctions peuvent évoluer. <a href="https://github.com/grognard/grognard/issues">Signaler un problème sur GitHub</a>.</p>
   <p class="download-skip"><a href="#configuration">Configuration, espace disque et pourquoi l’installeur est volumineux</a></p>
 
   <section class="download-grid" aria-label="Téléchargements par système">
     <article class="download-card" data-platform="mac">
       <div class="download-card__top"><span>01</span><span>macOS</span></div>
-      <h2>Mac</h2>
+      <h2><img class="download-card__os download-card__os--paper download-card__os--apple" src="/user/themes/lejeanbaptiste/images/os/apple-burgundy@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/apple-burgundy@2x.png 2x, /user/themes/lejeanbaptiste/images/os/apple-burgundy@3x.png 3x" width="51" height="64" alt=""><img class="download-card__os download-card__os--crimson download-card__os--apple" src="/user/themes/lejeanbaptiste/images/os/apple-cream@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/apple-cream@2x.png 2x, /user/themes/lejeanbaptiste/images/os/apple-cream@3x.png 3x" width="51" height="64" alt=""><span class="visually-hidden">Mac</span></h2>
       <p class="download-card__note">Installeur signé et notarisé pour macOS.</p>
       <div class="download-card__actions">
         <a class="download-button" data-asset="mac-arm64" href="https://github.com/grognard/grognard/releases/latest">Télécharger pour Apple silicon <span>→</span></a>
@@ -25,7 +24,7 @@ body_classes: downloads
 
     <article class="download-card" data-platform="windows">
       <div class="download-card__top"><span>02</span><span>Windows</span></div>
-      <h2>Windows</h2>
+      <h2><img class="download-card__os download-card__os--paper download-card__os--windows" src="/user/themes/lejeanbaptiste/images/os/windows-burgundy@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/windows-burgundy@2x.png 2x, /user/themes/lejeanbaptiste/images/os/windows-burgundy@3x.png 3x" width="64" height="64" alt=""><img class="download-card__os download-card__os--crimson download-card__os--windows" src="/user/themes/lejeanbaptiste/images/os/windows-cream@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/windows-cream@2x.png 2x, /user/themes/lejeanbaptiste/images/os/windows-cream@3x.png 3x" width="64" height="64" alt=""><span class="visually-hidden">Windows</span></h2>
       <p class="download-card__note">Installeur Windows pour PC 64 bits.</p>
       <div class="download-card__actions">
         <a class="download-button" data-asset="windows-x64" href="https://github.com/grognard/grognard/releases/latest">Télécharger pour Windows <span>→</span></a>
@@ -35,7 +34,7 @@ body_classes: downloads
 
     <article class="download-card" data-platform="linux">
       <div class="download-card__top"><span>03</span><span>Linux</span></div>
-      <h2>Linux</h2>
+      <h2><img class="download-card__os download-card__os--paper download-card__os--linux" src="/user/themes/lejeanbaptiste/images/os/linux-burgundy@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/linux-burgundy@2x.png 2x, /user/themes/lejeanbaptiste/images/os/linux-burgundy@3x.png 3x" width="70" height="70" alt=""><img class="download-card__os download-card__os--crimson download-card__os--linux" src="/user/themes/lejeanbaptiste/images/os/linux-cream@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/linux-cream@2x.png 2x, /user/themes/lejeanbaptiste/images/os/linux-cream@3x.png 3x" width="70" height="70" alt=""><span class="visually-hidden">Linux</span></h2>
       <p class="download-card__note">Paquet <code>.deb</code> pour Debian et Ubuntu.</p>
       <div class="download-card__actions">
         <a class="download-button" data-asset="linux-amd64" href="https://github.com/grognard/grognard/releases/latest">Télécharger pour Linux <span>→</span></a>

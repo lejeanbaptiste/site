@@ -3,11 +3,12 @@ title: Comparer les outils
 menu: Comparer les outils
 slug: comparaison
 body_classes: comparison-page
+page_splash: /images/tool_splash.png
+page_splash_alt: "Instruments de cartographie et de mesure sur une table de travail"
+template: comparison
+comparison_kicker: "Cinq constats, un atelier"
+comparison_intro: "Il n’existe pas un seul bon outil pour les humanités numériques. Grognard n’est pas « le meilleur » pour tout le monde : il occupe un croisement que les autres laissent vide. L’argument tient en cinq points. Le tableau plus bas dit ensuite comment s’en servir avec oXygen, Word, MARKUS, LEAF-Writer ou un site d’édition."
 ---
-
-## Cinq constats, un atelier
-
-Il n’existe pas un seul bon outil pour les humanités numériques. Grognard n’est pas « le meilleur » pour tout le monde : il occupe un **croisement** que les autres laissent vide. L’argument tient en cinq points. Le tableau plus bas dit ensuite comment s’en servir *avec* oXygen, Word, MARKUS, LEAF-Writer ou un site d’édition.
 
 <ol class="comparison-pillars">
   <li>

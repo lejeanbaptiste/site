@@ -10,7 +10,7 @@
           <p>{{ page.header.guide_intro }}</p>
         </div>
         <figure class="guide-detail__portrait">
-          <img src="{{ url('theme://images/' ~ page.header.guide_portrait) }}" alt="">
+          <span class="guide-detail__portrait-frame"><img src="{{ url('theme://images/' ~ page.header.guide_portrait) }}" alt=""></span>
         </figure>
         {% if page.header.guide_toc %}
           <nav class="guide-detail__toc" aria-label="Sommaire de la page">

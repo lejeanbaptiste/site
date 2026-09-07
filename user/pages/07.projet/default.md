@@ -2,9 +2,10 @@
 title: Le projet
 menu: Projet
 body_classes: comparison-page
+template: project
+project_kicker: "Un logiciel libre pour l’édition savante"
+project_intro: "Grognard est développé par [Daniel Patrick Morgan](https://www.crcao.fr/membre/daniel-patrick-morgan/) (CNRS-CRCAO). Code source : [GitHub](https://github.com/grognard/grognard). Logiciel libre, [AGPL-3](https://www.gnu.org/licenses/agpl-3.0.html), fork de bureau de [LEAF-Writer](https://leaf-writer.leaf-vre.org/) (également AGPL-3)."
 ---
-
-Grognard est développé par [Daniel Patrick Morgan](https://www.crcao.fr/membre/daniel-patrick-morgan/) (CNRS-CRCAO). Code source : [GitHub](https://github.com/grognard/grognard). Logiciel libre, [AGPL-3](https://www.gnu.org/licenses/agpl-3.0.html), fork de bureau de [LEAF-Writer](https://leaf-writer.leaf-vre.org/) (également AGPL-3).
 
 <h2 id="equipe">Équipe</h2>
 

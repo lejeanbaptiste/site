@@ -3,11 +3,10 @@ title: Ressources
 menu: Ressources
 slug: ressources
 body_classes: comparison-page
+template: resources
+resources_kicker: "Données, packs et greffons"
+resources_intro: "Grognard lui-même est un logiciel [AGPL-3](https://www.gnu.org/licenses/agpl-3.0.html). Les bases savantes ne sont pas dans l’installeur : elles s’ajoutent à la demande, restent sur votre disque, et conservent la licence de leur source. C’est la page à lire avant d’accepter environ 600&nbsp;Mo de CBDB."
 ---
-
-## Données, packs et greffons
-
-Grognard lui-même est un logiciel [AGPL-3](https://www.gnu.org/licenses/agpl-3.0.html). Les bases savantes **ne sont pas** dans l’installeur : elles s’ajoutent à la demande, restent sur votre disque, et **conservent la licence de leur source**. C’est la page à lire avant d’accepter environ 600&nbsp;Mo de CBDB.
 
 Deux étages, pour les autorités :
 

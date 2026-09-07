@@ -1,0 +1,19 @@
+{% extends 'default.html.twig' %}
+
+{% block main %}
+  <main class="resources-page-main">
+    <section class="resources-hero">
+      <div class="resources-hero__copy">
+        <p class="eyebrow">Grognard</p>
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.header.resources_kicker }}</h2>
+        <div class="resources-hero__intro">{{ page.header.resources_intro|markdown|raw }}</div>
+      </div>
+    </section>
+    <section class="page-content page-content--standard resources-content">
+      <article>
+        <div class="prose">{{ page.content|raw }}</div>
+      </article>
+    </section>
+  </main>
+{% endblock %}

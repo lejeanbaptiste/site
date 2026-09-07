@@ -19,6 +19,7 @@
       <article>
         <p class="eyebrow">Grognard</p>
         <h1>{{ page.title }}</h1>
+        {% if page.header.page_splash %}<figure class="page-splash"><img src="{{ page.header.page_splash }}" alt="{{ page.header.page_splash_alt|default('') }}"></figure>{% endif %}
         <div class="prose">{{ page.content|raw }}</div>
       </article>
     </main>{% endblock %}
