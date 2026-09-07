@@ -3,11 +3,20 @@ title: Fonctions avancées
 menu: Fonctions avancées
 visible: false
 template: guide-detail
+guide_portrait: guide-advanced.png
+guide_intro: "Les outils qui donnent davantage de contrôle sur la structure, les corpus et les services connectés."
+guide_toc:
+  - { id: editeur-xml, label: Éditeur XML }
+  - { id: valider-remplacer, label: Valider et remplacer }
+  - { id: grande-echelle, label: Grande échelle }
+  - { id: carte-parametres, label: Paramètres }
+  - { id: garde-fous, label: Garde-fous }
+  - { id: traduction, label: Traduction }
+  - { id: ia, label: IA }
+  - { id: plugins, label: Plugins }
+  - { id: github-confidentialite, label: GitHub et confidentialité }
+  - { id: operation-sensible, label: Opération sensible }
 ---
-
-# Aller plus loin avec Grognard.
-
-Les fonctions avancées ne concernent pas seulement le XML. Elles donnent accès aux outils capables de modifier une structure entière, de travailler sur plusieurs fichiers ou d’envoyer du texte à un service extérieur. Les pages [Fonctions de base](/guide/fonctions-de-base), [Fichiers](/guide/fichiers) et [Base de données](/guide/base-de-donnees) expliquent les gestes quotidiens ; cette page décrit les outils qui demandent davantage de contrôle.
 
 Pour ouvrir les réglages, utilisez **Paramètres** ou le raccourci <kbd>⌘</kbd> + <kbd>,</kbd>. L’onglet **Projet** concerne le dossier ouvert ; les autres onglets concernent généralement cette machine, cet utilisateur ou l’application.
 
@@ -29,6 +38,7 @@ Dans le mode Source, Grognard relie les balises ouvrantes et fermantes d’un m�
 
 Cette édition liée ne rend pas automatiquement le document valide au regard du schéma. Après une modification, enregistrez puis consultez **Validation**. L’édition directe du code XML doit être activée dans **Paramètres → Garde-fous → Autoriser l’édition directe du code XML**.
 
+<a id="valider-remplacer"></a>
 ## 2. Valider et remplacer
 
 Un XML **bien formé** respecte les règles syntaxiques minimales : les balises sont correctement imbriquées et fermées. Un XML **valide** respecte en plus la grammaire du schéma du projet. Un document peut donc être bien formé tout en contenant une structure que le schéma interdit.
@@ -37,6 +47,7 @@ Le panneau **Validation** affiche les erreurs du document. Commencez par la prem
 
 La recherche et le remplacement <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>F</kbd> peuvent viser le texte visible ou, en mode Source, le balisage lui-même. Dans **Paramètres → Garde-fous**, laissez activé **Exiger un XML bien formé pour Rechercher et remplacer**. Avant un remplacement global, faites un instantané et testez l’opération sur un seul document.
 
+<a id="grande-echelle"></a>
 ## 3. Travailler à grande échelle
 
 Le bouton **Transformation avancée des balises** permet de rechercher et de remplacer des éléments ou des attributs dans une structure XML. Il s’agit d’une opération éditoriale sur la structure, pas d’une simple recherche de mots.
@@ -45,6 +56,7 @@ Le balisage par liste et les suggestions par IA peuvent également être lancés
 
 Le panneau **XPath** sert à poser des questions sur la structure — par exemple « quelles balises `persName` n’ont pas de clé ? » — plutôt qu’à rechercher une simple chaîne de caractères. Les outils d’interface pour afficher les balises, les sauts de page et les notes aident à lire le résultat sans modifier le XML.
 
+<a id="carte-parametres"></a>
 ## 4. La carte des paramètres
 
 | Onglet | Ouvrez-le lorsque vous voulez… | Voir aussi |
@@ -61,6 +73,7 @@ Le panneau **XPath** sert à poser des questions sur la structure — par exempl
 | **Politique de traduction** | régler la présentation des noms, dates et titres | Cette page, §6 |
 | **Confidentialité** | relire ce qui reste local et ce qui peut être envoyé | [Confidentialité](/privacy) |
 
+<a id="garde-fous"></a>
 ## 5. Les garde-fous
 
 Les garde-fous existent parce qu’un remplacement global ou une automatisation mal ciblée peut endommager un corpus en quelques secondes.
@@ -98,6 +111,7 @@ Pour la traduction, Grognard peut remplacer les entités par des variables, fair
 
 Les profils de consignes peuvent adapter le rôle demandé au modèle — suggestion, contrôle ou proposition de désambiguïsation — mais toute proposition IA doit être relue et validée par vous.
 
+<a id="plugins"></a>
 ## 8. Les plugins qui ne servent pas à importer un corpus
 
 Les plugins s’installent depuis **Paramètres → Plugins** ; Grognard peut vous proposer les ressources correspondant à la langue d’un nouveau projet.
@@ -108,6 +122,7 @@ Les plugins s’installent depuis **Paramètres → Plugins** ; Grognard peut vo
 
 Les plugins d’importation Kanripo, CBETA, Daozang et BDRC sont décrits sur la page [Fichiers](/guide/fichiers), qui explique aussi leur provenance et leurs exigences réseau.
 
+<a id="github-confidentialite"></a>
 ## 9. Interface, GitHub et confidentialité
 
 L’onglet **Interface** permet notamment de choisir la langue de l’application, le thème, la police, le zoom, l’affichage des noms de balises et le traitement de certains espaces CJK. Ces préférences changent votre environnement de travail, pas les données déjà encodées.
@@ -116,6 +131,7 @@ La connexion GitHub est facultative. Elle sert de clé pour le classement et cer
 
 Grognard fonctionne localement par défaut. Les services d’IA, les recherches d’autorité, les sauvegardes cloud, la synchronisation centrale et LanguageTool distant sont des fonctions distinctes, activées selon vos choix. Pour le détail de ce qui reste sur la machine et de ce qui peut être transmis, consultez la page [Confidentialité](/privacy).
 
+<a id="operation-sensible"></a>
 ## 10. Avant une opération sensible
 
 1. Identifiez les fichiers et les données que l’opération va toucher.

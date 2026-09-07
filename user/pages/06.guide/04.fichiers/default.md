@@ -3,14 +3,20 @@ title: Fichiers
 menu: Fichiers
 visible: false
 template: guide-detail
+guide_portrait: guide-files.png
+guide_intro: "Comprendre ce qui entre dans un projet, importer des sources et protéger votre travail."
+guide_toc:
+  - { id: projet, label: Contenu d’un projet }
+  - { id: operations, label: Opérations courantes }
+  - { id: locaux, label: Fichiers locaux }
+  - { id: web, label: Sources web }
+  - { id: plugins, label: Plugins }
+  - { id: sauvegarder, label: Sauvegarder }
+  - { id: exporter, label: Exporter }
+  - { id: continuer, label: Continuer }
 ---
 
-# Travailler avec vos fichiers.
-
-Vous savez maintenant ouvrir un projet et un document. Cette page explique ce qui entre dans un projet Grognard, comment importer des sources et comment protéger votre travail contre les mauvaises manipulations.
-
-Un principe suffit à retenir : un import réussi signifie seulement qu’un fichier a été écrit. Ouvrez toujours un résultat, vérifiez-le, puis élargissez l’opération au reste du corpus.
-
+<a id="projet"></a>
 ## 1. Ce que contient un projet
 
 Un projet Grognard est un dossier, et non un fichier isolé. Il rassemble les éléments qui doivent rester liés pour que l’édition reste lisible et réutilisable :
@@ -34,6 +40,7 @@ Ne choisissez pas le dossier de base d’entités comme projet et ne sortez pas 
 
 Les fichiers compagnons de traduction suivent la source lorsqu’elle est renommée ou déplacée dans l’Explorateur. La suppression d’une source peut également proposer la suppression de ses compagnons : vérifiez la confirmation avant de poursuivre.
 
+<a id="operations"></a>
 ## 2. Les opérations courantes
 
 Dans le **panneau de navigation des fichiers**, un clic gauche ouvre un document. Un clic droit ouvre un menu contextuel qui permet de le renommer, de le déplacer ou de le supprimer.
@@ -42,6 +49,7 @@ Pour créer un document, utilisez **Fichier → Nouveau fichier** ou <kbd>⌘</k
 
 Le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd> enregistre le document courant. Plusieurs documents peuvent rester ouverts dans des onglets : fermer un onglet ne ferme pas le projet et ne supprime pas le fichier.
 
+<a id="locaux"></a>
 ## 3. Importer des fichiers locaux
 
 Choisissez **Fichier → Importer des documents** pour importer un fichier, plusieurs fichiers ou un dossier. Grognard peut convertir notamment des fichiers TXT, Markdown, RTF, Word (`.docx`), ODT et XML vers la structure du projet.
@@ -54,6 +62,7 @@ Après tout import, ouvrez au moins un résultat en vue visuelle et contrôlez l
 
 > **À vérifier avant de généraliser.** Un import qui réussit prouve seulement qu’un fichier a été produit. Ouvrez un échantillon, comparez-le à la source, vérifiez sa provenance et sa validation, puis seulement importez ou transformez le reste du corpus.
 
+<a id="web"></a>
 ## 4. Importer depuis le Web
 
 ### Wikisource
@@ -64,6 +73,7 @@ L’extension Grognard pour navigateur est un raccourci pratique pour envoyer de
 
 Dans Chromium, chargez l’extension décompressée depuis la page des extensions en activant le mode développeur. Dans Firefox, chargez temporairement `manifest.json` depuis `about:debugging` ; ce chargement est retiré au redémarrage du navigateur.
 
+<a id="plugins"></a>
 ## 5. Les plugins d’importation
 
 Les commandes de corpus apparaissent dans le menu **Fichier** seulement après l’activation du plugin correspondant dans **Paramètres → Plugins**. Grognard peut proposer les packs et plugins adaptés lorsque vous ouvrez pour la première fois un projet en chinois, en chinois classique ou en tibétain.
@@ -79,6 +89,7 @@ Ces imports n’ont pas le même fonctionnement : Kanripo, CBETA et BDRC utilise
 
 Les autres plugins, notamment ceux qui concernent les autorités et les dates est-asiatiques, se gèrent depuis **Paramètres → Plugins**. Ils ne sont pas nécessaires pour comprendre l’organisation des fichiers.
 
+<a id="sauvegarder"></a>
 ## 6. Sauvegarder et récupérer son travail
 
 ### Enregistrer souvent
@@ -101,6 +112,7 @@ Conservez aussi une copie du dossier sur un autre disque, avec la véritable Tim
 
 Après une erreur sérieuse, arrêtez-vous. Notez le fichier et l’opération concernés, restaurez un état connu, puis reprenez le travail. N’essayez pas de corriger à l’aveugle l’ensemble du corpus avant d’avoir compris le premier cas.
 
+<a id="exporter"></a>
 ## 7. Exporter et partager
 
 La commande **Fichier → Exporter le document…** produit une vue exportée du document selon les formats proposés par la version installée. Elle ne remplace pas le dossier du projet : les traductions, le schéma, les entités et l’historique n’y sont pas nécessairement inclus.
@@ -109,6 +121,7 @@ Pour partager un projet avec un collègue, compressez son dossier entier et joig
 
 Pour comprendre le catalogue d’entités et sa relation avec les fichiers XML, consultez la page [Base de données](/guide/base-de-donnees).
 
+<a id="continuer"></a>
 ## 8. Avant de continuer
 
 - Le dossier du projet porte un nom clair et se trouve dans un emplacement sauvegardé.

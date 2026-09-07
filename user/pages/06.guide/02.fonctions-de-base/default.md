@@ -3,9 +3,19 @@ title: Fonctions de base
 menu: Fonctions de base
 visible: false
 template: guide-detail
+guide_portrait: guide-basic.png
+guide_intro: "De l’installation au premier document XML enregistré et validé."
+guide_toc:
+  - { id: installer, label: Installer }
+  - { id: mises-a-jour, label: Mises à jour }
+  - { id: projet, label: Projet }
+  - { id: document, label: Ouvrir un document }
+  - { id: visuel, label: Vue visuelle }
+  - { id: traduction, label: Traduction }
+  - { id: balisage, label: Balisage }
+  - { id: desambiguïser, label: Désambiguïser }
+  - { id: pourquoi-faire, label: Pourquoi faire ? }
 ---
-
-# Commencer avec Grognard.
 
 <figure class="guide-inline-visual">
   <img src="/user/themes/lejeanbaptiste/images/screenshot-workspace.png" alt="Vue de travail de Grognard avec un document ouvert">
@@ -14,6 +24,7 @@ template: guide-detail
 
 <p><a class="text-link" href="/guide">← Retour au guide</a></p>
 
+<a id="installer"></a>
 ## 1. Installer l’application
 
 Depuis la page [Télécharger](/download), téléchargez la version correspondant à votre système, puis installez Grognard à l’aide de l’installeur graphique.
@@ -31,10 +42,12 @@ Lorsque vous ouvrez l’application pour la première fois, Grognard vous demand
 
 Grognard est une application de bureau : vos fichiers et vos données restent sur votre ordinateur. L’édition normale ne nécessite pas de compte et Grognard ne collecte pas vos données. Pour plus d’informations, consultez la [politique de confidentialité](/privacy).
 
+<a id="mises-a-jour"></a>
 ## 2. Mises à jour
 
 Sous Windows et macOS, l’application Grognard reçoit et applique automatiquement les mises à jour pendant son utilisation. Sous Linux, téléchargez le paquet `.deb` mis à jour depuis la page [Télécharger](/download) (Debian et Ubuntu). Le contenu de ces mises à jour est documenté dans les [notes de version](https://github.com/grognard/grognard/releases).
 
+<a id="projet"></a>
 ## 3. Créer ou ouvrir un projet
 
 Pour commencer à éditer des documents, vous devez d’abord créer un projet ou ouvrir un projet existant. Pour cela, utilisez le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>O</kbd>, ou allez dans **Fichier → Ouvrir un projet**.
@@ -56,6 +69,7 @@ N’oubliez pas d’enregistrer vos paramètres avec le bouton situé en bas de 
 
 La première fois que vous créez ou ouvrez un projet dans une langue donnée, Grognard vous proposera d’installer les packs de ressources et les plugins prévus pour cette langue. Vous pourrez ensuite y accéder depuis **Paramètres → Packs de ressources** et **Paramètres → Plugins**.
 
+<a id="document"></a>
 ## 4. Ouvrir un document
 
 Lorsque vous ouvrez un projet existant, ouvrez le **panneau de navigation des fichiers** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tab_explorer.png" alt="Explorateur de fichiers"> pour parcourir votre corpus. Un clic gauche ouvre un fichier. Un clic droit ouvre un menu contextuel qui permet de le renommer, de le déplacer ou de le supprimer.
@@ -68,6 +82,7 @@ Pour une première prise en main, ouvrez seulement quelques paragraphes. Vous po
 
 Pour enregistrer un document, utilisez le bouton **Enregistrer** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/save.png" alt="Enregistrer"> ou le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd>. Enregistrez régulièrement, notamment après une modification du balisage ou des attributs, afin de conserver les changements dans le fichier du projet.
 
+<a id="visuel"></a>
 ## 5. Écrire dans la vue visuelle
 
 Vous pouvez écrire dans la vue visuelle pour créer ou modifier la transcription de votre source principale. À la différence d’un traitement de texte, Grognard ne cherche pas à vous laisser une liberté complète sur la manière de saisir et de mettre en forme vos textes. Ses fonctions sont volontairement sobres : l’objectif est de favoriser la simplicité, l’homogénéité et la lisibilité par la machine.
@@ -95,6 +110,7 @@ Pour protéger la source, cliquez sur le bouton **Verrouiller le texte** <img cl
   <figcaption><span>02</span> Distinguer le texte et ses entités</figcaption>
 </figure>
 
+<a id="traduction"></a>
 ## 6. Traduire dans le panneau de traduction
 
 Cliquez sur l’icône du **panneau de traduction** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/translate.png" alt="Traduction"> pour l’ouvrir.
@@ -107,6 +123,7 @@ Vous y trouverez également les fonctions essentielles d’un traitement de text
 
 Si vous disposez d’une clé d’API, le panneau de traduction peut aussi générer une proposition de traduction à l’aide d’un service d’IA. Cette fonction est facultative ; son fonctionnement et ses précautions sont présentés dans les [fonctions avancées](/guide/fonctions-avancees#ia).
 
+<a id="balisage"></a>
 ## 7. Baliser le texte
 
 Grognard est avant tout un outil de balisage XML destiné à l’extraction et à l’analyse des données en humanités numériques. Il automatise toutefois les opérations fastidieuses de ce travail et rend immédiatement utiles les balises que vous ajoutez.
@@ -127,6 +144,7 @@ Après l’auto-balisage, Grognard vous demande de valider les résultats afin d
 
 Une fois les éléments de base identifiés, ouvrez le **panneau CSS** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tab_highlight.png" alt="CSS">. Vous pourrez y choisir les couleurs du texte et des surlignages afin de distinguer visuellement les différentes catégories d’entités.
 
+<a id="desambiguïser"></a>
 ## 8. Désambiguïser les entités
 
 Le balisage indique qu’un passage désigne une personne, un lieu, une œuvre ou une autre catégorie d’entité. La **désambiguïsation** consiste à préciser de quelle entité il s’agit en lui associant un identifiant stable. Elle distingue ainsi une forme de surface — les mots présents dans le document — de la chose à laquelle ces mots renvoient.
@@ -143,6 +161,7 @@ Après avoir balisé une mention, cliquez sur **Désambiguïser** <img class="gu
 
 Vous pouvez aussi effectuer cette recherche depuis le panneau **Attributs** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/label.png" alt="Attributs">. Le lien est enregistré dans le document sous la forme d’un attribut d’identification, tandis que la fiche complète de l’entité reste dans la base du projet.
 
+<a id="pourquoi-faire"></a>
 ## 9. Pourquoi faire ?
 
 ### 1. Une base de données pour le reste

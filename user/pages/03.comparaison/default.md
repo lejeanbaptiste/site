@@ -109,7 +109,7 @@ Grognard est un **fork de bureau** de [LEAF-Writer](https://leaf-writer.leaf-vre
     <tr class="is-grognard">
       <th scope="row"><a href="/">Grognard</a></th>
       <td>Atelier d’édition savante, surtout textes d’Asie orientale</td>
-      <td>Application de bureau · fichiers locaux · GPL-2</td>
+      <td>Application de bureau · fichiers locaux · AGPL-3</td>
       <td>Transcrire et baliser en TEI, désambiguïser avec des autorités locales, traduire en fichiers compagnons, valider, tenir une base d’entités</td>
       <td>Le moment où l’on lit, encode et identifie sur sa machine, dans un dossier que l’on peut aussi ouvrir ailleurs.</td>
     </tr>

@@ -3,8 +3,22 @@
 {% block main %}
   <main class="guide-detail">
     <article class="guide-detail__article">
-      <p class="eyebrow">Guide · {{ page.title }}</p>
-      <div class="prose">
+      <header class="guide-detail__welcome">
+        <div class="guide-detail__intro-copy">
+          <p class="eyebrow">Guide</p>
+          <h1>{{ page.title }}</h1>
+          <p>{{ page.header.guide_intro }}</p>
+        </div>
+        <figure class="guide-detail__portrait">
+          <img src="{{ url('theme://images/' ~ page.header.guide_portrait) }}" alt="">
+        </figure>
+        {% if page.header.guide_toc %}
+          <nav class="guide-detail__toc" aria-label="Sommaire de la page">
+            {% for item in page.header.guide_toc %}<a href="#{{ item.id }}"><span>{{ '%02d'|format(loop.index) }}</span>{{ item.label }}</a>{% endfor %}
+          </nav>
+        {% endif %}
+      </header>
+      <div class="guide-detail__body prose">
         {{ page.content|raw }}
       </div>
     </article>
