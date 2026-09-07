@@ -18,7 +18,7 @@ TGIR Huma-Num – UMS 3598
 
 Le site est soumis à la législation française et internationale sur le droit d’auteur et la propriété intellectuelle. Tout exemple littéraire utilisé sur le site peut être reproduit selon les normes applicables de reproduction des œuvres littéraires, à condition que la source et l’auteur soient cités.
 
-Sauf indication contraire, le code source de Grognard est distribué sous licence [GNU General Public License version 2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html). Les composants et ressources tiers conservent leurs propres licences. Une présentation lisible est sur la page [Le projet](/projet) ; le fichier technique [THIRD_PARTY_NOTICES.md](https://github.com/grognard/grognard/blob/main/THIRD_PARTY_NOTICES.md) accompagne le dépôt.
+Sauf indication contraire, le code source de Grognard est distribué sous licence [GNU Affero General Public License version 3](https://www.gnu.org/licenses/agpl-3.0.html). Les composants et ressources tiers conservent leurs propres licences. Une présentation lisible est sur la page [Le projet](/projet) ; le fichier technique [THIRD_PARTY_NOTICES.md](https://github.com/grognard/grognard/blob/main/THIRD_PARTY_NOTICES.md) accompagne le dépôt.
 
 ## Droits de reproduction
 

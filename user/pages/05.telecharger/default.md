@@ -7,7 +7,7 @@ body_classes: downloads
 
 <div class="download-page" data-release-repo="grognard/grognard">
   <p class="download-meta" aria-live="polite">Télécharger Grognard <span aria-hidden="true">·</span> <strong data-release-version>Recherche de la version…</strong></p>
-  <p class="download-meta">Logiciel libre distribué sous licence <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GPL-2</a>.</p>
+  <p class="download-meta">Logiciel libre distribué sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3</a>.</p>
   <p class="download-notice"><strong>Version bêta.</strong> Grognard est encore en développement et certaines fonctions peuvent évoluer. <a href="https://github.com/grognard/grognard/issues">Signaler un problème sur GitHub</a>.</p>
   <p class="download-notice">Le classement est facultatif ; vos textes et vos fichiers restent sur votre ordinateur.</p>
   <p class="download-skip"><a href="#configuration">Configuration, espace disque et pourquoi l’installeur est volumineux</a></p>

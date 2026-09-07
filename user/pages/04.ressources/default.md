@@ -7,7 +7,7 @@ body_classes: comparison-page
 
 ## Données, packs et greffons
 
-Grognard lui-même est un logiciel [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html). Les bases savantes **ne sont pas** dans l’installeur : elles s’ajoutent à la demande, restent sur votre disque, et **conservent la licence de leur source**. C’est la page à lire avant d’accepter environ 600&nbsp;Mo de CBDB.
+Grognard lui-même est un logiciel [AGPL-3](https://www.gnu.org/licenses/agpl-3.0.html). Les bases savantes **ne sont pas** dans l’installeur : elles s’ajoutent à la demande, restent sur votre disque, et **conservent la licence de leur source**. C’est la page à lire avant d’accepter environ 600&nbsp;Mo de CBDB.
 
 Deux étages, pour les autorités :
 
@@ -85,7 +85,7 @@ Les identifiants BDRC que vous voyez en désambiguïsation viennent en pratique 
 
 ## Greffons
 
-Le *code* des greffons est GPL-2, comme Grognard. Les **corpus** qu’ils touchent ont leur propre régime.
+Le *code* des greffons est AGPL-3, comme Grognard. Les **corpus** qu’ils touchent ont leur propre régime.
 
 <div class="comparison-matrix-wrap">
 <table>
@@ -102,13 +102,13 @@ Le *code* des greffons est GPL-2, comme Grognard. Les **corpus** qu’ils touche
       <th scope="row">Dates est-asiatiques (Sanmiao)</th>
       <td>Repérer et convertir ères, règnes, dates sexagésimales (Chine, Japon, Corée).</td>
       <td>Moteur <a href="https://github.com/PotatoSinology/sanmiao">Sanmiao</a> (calendriers), par Daniel Patrick Morgan ; pas un corpus de textes.</td>
-      <td>Sanmiao : MIT. Greffon : GPL-2. Huma-Num peut héberger une démo web ; l’auteur reste D. P. Morgan.</td>
+      <td>Sanmiao : MIT. Greffon : AGPL-3. Huma-Num peut héberger une démo web ; l’auteur reste D. P. Morgan.</td>
     </tr>
     <tr>
       <th scope="row">Norbert</th>
       <td>Balisage contextuel des personnes (dynastie, office, origine) et packs d’autorité associés.</td>
       <td>Voir le pack Norbert ci-dessus.</td>
-      <td>Code GPL-2 ; données : attribuez Daniel Patrick Morgan (Norbert).</td>
+      <td>Code AGPL-3 ; données : attribuez Daniel Patrick Morgan (Norbert).</td>
     </tr>
     <tr>
       <th scope="row">Import Kanripo</th>
@@ -175,7 +175,7 @@ Le poids de l’installeur et de ces ajouts est détaillé sur [Télécharger](/
 
 ## Comment citer, en pratique
 
-- **Le logiciel :** Grognard, logiciel libre GPL-2, fork de bureau de LEAF-Writer. Voir aussi [Mentions légales](/legal) et [THIRD_PARTY_NOTICES.md](https://github.com/grognard/grognard/blob/main/THIRD_PARTY_NOTICES.md) pour Chromium, TinyMCE, etc.
+- **Le logiciel :** Grognard, logiciel libre AGPL-3, fork de bureau de LEAF-Writer. Voir aussi [Mentions légales](/legal) et [THIRD_PARTY_NOTICES.md](https://github.com/grognard/grognard/blob/main/THIRD_PARTY_NOTICES.md) pour Chromium, TinyMCE, etc.
 - **Une personne ou un office identifié via CBDB :** citez CBDB (et la licence NC-SA si vous republiez un extrait structuré).
 - **Un lieu DILA ou CHGIS :** citez DILA ou CHGIS v6 selon la fiche.
 - **Un titre d’office glosé par HuckBot / MaxiRicci :** ce n’est pas une citation de Hucker. Indiquez le système (HuckBot5000 / MaxiRicci7000) si vous publiez la glose.

@@ -4,7 +4,7 @@ menu: Projet
 body_classes: comparison-page
 ---
 
-Grognard est développé par [Daniel Patrick Morgan](https://www.crcao.fr/membre/daniel-patrick-morgan/) (CNRS-CRCAO). Code source : [GitHub](https://github.com/grognard/grognard). Logiciel libre, [GPL-2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html), fork de bureau de [LEAF-Writer](https://leaf-writer.leaf-vre.org/) (également GPL-2).
+Grognard est développé par [Daniel Patrick Morgan](https://www.crcao.fr/membre/daniel-patrick-morgan/) (CNRS-CRCAO). Code source : [GitHub](https://github.com/grognard/grognard). Logiciel libre, [AGPL-3](https://www.gnu.org/licenses/agpl-3.0.html), fork de bureau de [LEAF-Writer](https://leaf-writer.leaf-vre.org/) (également AGPL-3).
 
 <h2 id="equipe">Équipe</h2>
 
@@ -29,7 +29,7 @@ Composants embarqués ou adaptés. Les dépendances transitives d’npm sont dan
     <tr>
       <th scope="row"><a href="https://leaf-writer.leaf-vre.org/">LEAF-Writer</a> / CWRC-Writer</th>
       <td>Cœur de l’éditeur (balisage visuel, entités, schéma). Grognard en est un fork Electron.</td>
-      <td>GPL-2.0</td>
+      <td>AGPL-3.0</td>
     </tr>
     <tr>
       <th scope="row"><a href="https://www.tiny.cloud/">TinyMCE</a></th>
@@ -53,8 +53,8 @@ Composants embarqués ou adaptés. Les dépendances transitives d’npm sont dan
     </tr>
     <tr>
       <th scope="row"><a href="https://github.com/grognard/plugins">Greffons Grognard</a></th>
-      <td>Norbert, dates, imports Kanripo / CBETA / Daozang / BDRC. Code GPL-2 ; corpus : [Ressources](/ressources).</td>
-      <td>GPL-2.0 (code)</td>
+      <td>Norbert, dates, imports Kanripo / CBETA / Daozang / BDRC. Code AGPL-3 ; corpus : [Ressources](/ressources).</td>
+      <td>AGPL-3.0 (code)</td>
     </tr>
     <tr>
       <th scope="row">JSZip, Mammoth, @xmldom/xmldom</th>
