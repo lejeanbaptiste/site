@@ -36,5 +36,6 @@
 # --- build artefacts & local cruft -------------------------------------------
 /build/
 /public/
+/images/src/
 **/.DS_Store
 *.swp
