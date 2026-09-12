@@ -7,5 +7,16 @@
     {% for item in pages.children.visible %}
       {% if item.slug != 'home' %}<a href="{{ item.url }}"{% if item.active %} aria-current="page"{% endif %}>{{ item.menu }}</a>{% endif %}
     {% endfor %}
+    {% set current_lang = grav.language.getLanguage %}
+    {% if page.translatedLanguages|length > 1 %}
+      <details class="site-lang">
+        <summary>{{ current_lang|upper }}</summary>
+        <div class="site-lang__menu">
+          {% for code, route in page.translatedLanguages %}
+            {% if code != current_lang %}<a href="{{ grav.pages.route(route, code) }}">{{ code|upper }}</a>{% endif %}
+          {% endfor %}
+        </div>
+      </details>
+    {% endif %}
   </nav>
 </header>

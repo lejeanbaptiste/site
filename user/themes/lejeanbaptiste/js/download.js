@@ -73,7 +73,8 @@
     if (!value) return '';
     var date = new Date(value);
     if (Number.isNaN(date.getTime())) return '';
-    return new Intl.DateTimeFormat('fr-FR', {
+    var locale = document.documentElement.lang === 'en' ? 'en-US' : 'fr-FR';
+    return new Intl.DateTimeFormat(locale, {
       day: 'numeric',
       month: 'long',
       year: 'numeric'
@@ -94,10 +95,10 @@
         var releaseDate = formatReleaseDate(release.published_at);
         version.textContent = 'version ' + release.tag_name + (releaseDate ? ' (' + releaseDate + ')' : '');
       }
-      releasePage.href = release.html_url;
+      if (releasePage) releasePage.href = release.html_url;
     })
     .catch(function () {
-      if (version) version.textContent = 'version indisponible';
-      releasePage.textContent = 'Voir les versions sur GitHub ↗';
+      if (version) version.textContent = document.documentElement.lang === 'en' ? 'version unavailable' : 'version indisponible';
+      if (releasePage) releasePage.textContent = document.documentElement.lang === 'en' ? 'View releases on GitHub ↗' : 'Voir les versions sur GitHub ↗';
     });
 }());

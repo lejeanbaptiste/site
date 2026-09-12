@@ -4,6 +4,10 @@ home:
 pages:
   theme: lejeanbaptiste
 
+languages:
+  supported: [fr, en]
+  include_default_lang: false
+
 cache:
   enabled: true
   check:

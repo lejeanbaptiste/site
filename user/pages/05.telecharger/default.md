@@ -5,10 +5,10 @@ slug: download
 body_classes: downloads
 ---
 
-<div class="download-page" data-release-repo="grognard/grognard">
-  <p class="download-meta" aria-live="polite">Télécharger Grognard <span aria-hidden="true">·</span> <strong data-release-version>Recherche de la version…</strong></p>
+<div class="download-page" data-release-repo="grognard-xml/grognard">
+  <p class="download-meta" aria-live="polite">Télécharger Grognard <span aria-hidden="true">·</span> <strong data-release-version>Recherche de la version…</strong> <span aria-hidden="true"></span> </p>
   <p class="download-meta">Logiciel libre distribué sous licence <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3</a>.</p>
-  <p class="download-notice">Grognard est encore en développement et certaines fonctions peuvent évoluer. <a href="https://github.com/grognard/grognard/issues">Signaler un problème sur GitHub</a>.</p>
+  <p class="download-notice">Grognard est encore en développement et certaines fonctions peuvent évoluer. <a href="https://github.com/grognard-xml/grognard/issues">Signaler un problème sur GitHub</a>.</p>
   <p class="download-skip"><a href="#configuration">Configuration, espace disque et pourquoi l’installeur est volumineux</a></p>
 
   <section class="download-grid" aria-label="Téléchargements par système">
@@ -17,8 +17,8 @@ body_classes: downloads
       <h2><img class="download-card__os download-card__os--paper download-card__os--apple" src="/user/themes/lejeanbaptiste/images/os/apple-burgundy@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/apple-burgundy@2x.png 2x, /user/themes/lejeanbaptiste/images/os/apple-burgundy@3x.png 3x" width="51" height="64" alt=""><img class="download-card__os download-card__os--crimson download-card__os--apple" src="/user/themes/lejeanbaptiste/images/os/apple-cream@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/apple-cream@2x.png 2x, /user/themes/lejeanbaptiste/images/os/apple-cream@3x.png 3x" width="51" height="64" alt=""><span class="visually-hidden">Mac</span></h2>
       <p class="download-card__note">Installeur signé et notarisé pour macOS.</p>
       <div class="download-card__actions">
-        <a class="download-button" data-asset="mac-arm64" href="https://github.com/grognard/grognard/releases/latest">Télécharger pour Apple silicon <span>→</span></a>
-        <a class="download-link" data-asset="mac-x64" href="https://github.com/grognard/grognard/releases/latest">Mac Intel</a>
+        <a class="download-button" data-asset="mac-arm64" href="https://github.com/grognard-xml/grognard/releases/latest">Télécharger pour Apple silicon <span>→</span></a>
+        <a class="download-link" data-asset="mac-x64" href="https://github.com/grognard-xml/grognard/releases/latest">Mac Intel</a>
       </div>
     </article>
 
@@ -27,8 +27,8 @@ body_classes: downloads
       <h2><img class="download-card__os download-card__os--paper download-card__os--windows" src="/user/themes/lejeanbaptiste/images/os/windows-burgundy@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/windows-burgundy@2x.png 2x, /user/themes/lejeanbaptiste/images/os/windows-burgundy@3x.png 3x" width="64" height="64" alt=""><img class="download-card__os download-card__os--crimson download-card__os--windows" src="/user/themes/lejeanbaptiste/images/os/windows-cream@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/windows-cream@2x.png 2x, /user/themes/lejeanbaptiste/images/os/windows-cream@3x.png 3x" width="64" height="64" alt=""><span class="visually-hidden">Windows</span></h2>
       <p class="download-card__note">Installeur Windows pour PC 64 bits.</p>
       <div class="download-card__actions">
-        <a class="download-button" data-asset="windows-x64" href="https://github.com/grognard/grognard/releases/latest">Télécharger pour Windows <span>→</span></a>
-        <a class="download-link" data-asset="windows-arm64" href="https://github.com/grognard/grognard/releases/latest">Windows ARM</a>
+        <a class="download-button" data-asset="windows-x64" href="https://github.com/grognard-xml/grognard/releases/latest">Télécharger pour Windows <span>→</span></a>
+        <a class="download-link" data-asset="windows-arm64" href="https://github.com/grognard-xml/grognard/releases/latest">Windows ARM</a>
       </div>
     </article>
 
@@ -37,8 +37,8 @@ body_classes: downloads
       <h2><img class="download-card__os download-card__os--paper download-card__os--linux" src="/user/themes/lejeanbaptiste/images/os/linux-burgundy@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/linux-burgundy@2x.png 2x, /user/themes/lejeanbaptiste/images/os/linux-burgundy@3x.png 3x" width="70" height="70" alt=""><img class="download-card__os download-card__os--crimson download-card__os--linux" src="/user/themes/lejeanbaptiste/images/os/linux-cream@2x.png" srcset="/user/themes/lejeanbaptiste/images/os/linux-cream@2x.png 2x, /user/themes/lejeanbaptiste/images/os/linux-cream@3x.png 3x" width="70" height="70" alt=""><span class="visually-hidden">Linux</span></h2>
       <p class="download-card__note">Paquet <code>.deb</code> pour Debian et Ubuntu.</p>
       <div class="download-card__actions">
-        <a class="download-button" data-asset="linux-amd64" href="https://github.com/grognard/grognard/releases/latest">Télécharger pour Linux <span>→</span></a>
-        <a class="download-link" data-asset="linux-arm64" href="https://github.com/grognard/grognard/releases/latest">Linux ARM64</a>
+        <a class="download-button" data-asset="linux-amd64" href="https://github.com/grognard-xml/grognard/releases/latest">Télécharger pour Linux <span>→</span></a>
+        <a class="download-link" data-asset="linux-arm64" href="https://github.com/grognard-xml/grognard/releases/latest">Linux ARM64</a>
       </div>
     </article>
   </section>
@@ -61,7 +61,7 @@ body_classes: downloads
             <button id="tab-firefox" role="tab" aria-selected="false" aria-controls="panel-firefox" data-tab="panel-firefox" tabindex="-1">Firefox</button>
           </div>
           <div id="panel-chromium" role="tabpanel" aria-labelledby="tab-chromium" data-tab-panel>
-            <div class="integration-card__links"><a href="https://github.com/grognard/grognard/releases/latest">Télécharger l’extension Chromium <span aria-hidden="true">↗</span></a></div>
+            <div class="integration-card__links"><a href="https://github.com/grognard-xml/grognard/releases/latest">Télécharger l’extension Chromium <span aria-hidden="true">↗</span></a></div>
             <ol>
               <li>Téléchargez <code>grognard-browser-extension-chromium-…zip</code> dans la dernière version, puis décompressez l’archive.</li>
               <li>Démarrez Grognard une fois pour enregistrer la passerelle de messagerie native.</li>
@@ -69,7 +69,7 @@ body_classes: downloads
             </ol>
           </div>
           <div id="panel-firefox" role="tabpanel" aria-labelledby="tab-firefox" data-tab-panel hidden>
-            <div class="integration-card__links"><a href="https://github.com/grognard/grognard/releases/latest">Télécharger l’extension Firefox <span aria-hidden="true">↗</span></a></div>
+            <div class="integration-card__links"><a href="https://github.com/grognard-xml/grognard/releases/latest">Télécharger l’extension Firefox <span aria-hidden="true">↗</span></a></div>
             <ol>
               <li>Téléchargez <code>grognard-browser-extension-firefox-…zip</code> dans la dernière version, puis décompressez l’archive.</li>
               <li>Démarrez Grognard une fois pour enregistrer la passerelle de messagerie native.</li>
@@ -78,7 +78,7 @@ body_classes: downloads
             <p class="integration-status">Le chargement temporaire est retiré au redémarrage de Firefox.</p>
           </div>
         </div>
-        <a class="integration-more" href="https://github.com/grognard/grognard/blob/main/README.md#browser-extension-corpus-import">Lire les instructions détaillées <span aria-hidden="true">↗</span></a>
+        <a class="integration-more" href="https://github.com/grognard-xml/grognard/blob/main/README.md#browser-extension-corpus-import">Lire les instructions détaillées <span aria-hidden="true">↗</span></a>
       </article>
 
       <article class="integration-card">
@@ -93,8 +93,8 @@ body_classes: downloads
           </div>
           <div id="panel-word" role="tabpanel" aria-labelledby="tab-word" data-tab-panel>
             <div class="integration-card__links">
-              <a href="https://github.com/grognard/wordprocessor">Projet Word <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/grognard/wordprocessor/blob/main/README.md">Documentation <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/grognard-xml/wordprocessor">Projet Word <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/grognard-xml/wordprocessor/blob/main/README.md">Documentation <span aria-hidden="true">↗</span></a>
             </div>
             <ol>
               <li>Démarrez Grognard avec un projet contenant une base d’entités.</li>

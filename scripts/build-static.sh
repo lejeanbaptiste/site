@@ -79,6 +79,8 @@ errors:
   log: true
 absolute_urls: false
 languages:
+  supported: [fr, en]
+  include_default_lang: false
   session_store_active: false
 YAML
 
