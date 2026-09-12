@@ -5,8 +5,8 @@ visible: true
 body_classes: classement-page
 ---
 
-## Classement en construction
+## Leaderboard under construction
 
-Le classement de Grognard est actuellement en préparation. Cette page accueillera prochainement les résultats des participantes et participants qui choisissent de partager leur progression.
+The Grognard leaderboard is currently being prepared. This page will soon display the results of participants who choose to share their progress.
 
-La participation restera facultative. L’édition normale de Grognard fonctionne hors connexion et ne nécessite pas de compte.
+Participation will remain optional. Normal editing in Grognard works offline and does not require an account.

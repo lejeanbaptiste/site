@@ -1,11 +1,12 @@
 {% extends 'default.html.twig' %}
 
 {% block main %}
+  {% set is_en = grav.language.getLanguage == 'en' %}
   <main class="guide-detail">
     <article class="guide-detail__article">
       <header class="guide-detail__welcome">
         <div class="guide-detail__intro-copy">
-          <p class="eyebrow">Guide</p>
+          <p class="eyebrow">{{ is_en ? 'Guide' : 'Guide' }}</p>
           <h1>{{ page.title }}</h1>
           <p>{{ page.header.guide_intro }}</p>
         </div>
@@ -13,7 +14,7 @@
           <span class="guide-detail__portrait-frame"><img src="{{ url('theme://images/' ~ page.header.guide_portrait) }}" alt=""></span>
         </figure>
         {% if page.header.guide_toc %}
-          <nav class="guide-detail__toc" aria-label="Sommaire de la page">
+          <nav class="guide-detail__toc" aria-label="{{ is_en ? 'Page contents' : 'Sommaire de la page' }}">
             {% for item in page.header.guide_toc %}<a href="#{{ item.id }}"><span>{{ '%02d'|format(loop.index) }}</span>{{ item.label }}</a>{% endfor %}
           </nav>
         {% endif %}

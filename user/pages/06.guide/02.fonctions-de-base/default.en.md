@@ -1,255 +1,255 @@
 ---
-title: Fonctions de base
-menu: Fonctions de base
+title: Basic features
+menu: Basic features
 visible: false
 template: guide-detail
 guide_portrait: guide-basic.png
-guide_intro: "De l’installation au premier document XML enregistré et validé."
+guide_intro: "From installation to your first saved and validated XML document."
 guide_toc:
-  - { id: installer, label: Installer }
-  - { id: mises-a-jour, label: Mises à jour }
-  - { id: projet, label: Projet }
-  - { id: document, label: Ouvrir un document }
-  - { id: visuel, label: Vue visuelle }
-  - { id: traduction, label: Traduction }
-  - { id: balisage, label: Balisage }
-  - { id: desambiguïser, label: Désambiguïser }
-  - { id: pourquoi-faire, label: Pourquoi faire ? }
+  - { id: installer, label: Install }
+  - { id: mises-a-jour, label: Updates }
+  - { id: projet, label: Project }
+  - { id: document, label: Open a document }
+  - { id: visuel, label: Visual view }
+  - { id: traduction, label: Translation }
+  - { id: balisage, label: Markup }
+  - { id: desambiguïser, label: Disambiguate }
+  - { id: pourquoi-faire, label: Why use it? }
 ---
 
-<p><a class="text-link" href="/guide">← Retour au guide</a></p>
+<p><a class="text-link" href="/guide">← Back to the guide</a></p>
 
 <a id="installer"></a>
-## 1. Installer l’application
+## 1. Install the application
 
-Depuis la page [Télécharger](/download), téléchargez la version correspondant à votre système, puis installez Grognard à l’aide de l’installeur graphique.
+From the [Download](/download) page, download the version for your system, then install Grognard with the graphical installer.
 
-Lorsque vous ouvrez l’application pour la première fois, Grognard vous demande trois informations :
+When you open the application for the first time, Grognard asks for three pieces of information:
 
-- **Votre nom complet** : le nom que vous souhaitez voir inscrit dans les données que vous produisez.
-- **L’emplacement de vos données personnelles** : choisissez un autre dossier si vous ne souhaitez pas utiliser l’emplacement proposé par le système.
-- **Activer les fonctions avancées** : cette option porte surtout sur l’édition directe du XML. Si vous la laissez désactivée, Grognard masque les outils suivants :
-  - le passage en mode **Source** (le XML brut) ;
-  - le panneau **Validation** (le rapport d’erreurs par rapport au schéma) ;
-  - l’indicateur d’erreurs de validation dans la barre inférieure.
+- **Your full name:** the name you want recorded in the data you produce.
+- **The location of your personal data:** choose another folder if you do not want to use the location suggested by the system.
+- **Enable advanced features:** this option primarily concerns direct XML editing. If you leave it disabled, Grognard hides the following tools:
+  - switching to **Source** mode (raw XML);
+  - the **Validation** panel (the schema error report);
+  - the validation-error indicator in the bottom bar.
 
-  Le reste du travail — transcription en mode **Visuel**, traduction, balisage, désambiguïsation — reste disponible. Vous pourrez réactiver l’édition XML plus tard : ouvrez **Paramètres** depuis le menu (**Grognard → Paramètres** sur Mac, ou l’entrée **Paramètres** du menu de l’application sous Windows et Linux ; raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>,</kbd>), puis l’onglet **Garde-fous**, et activez **Autoriser l’édition directe du code XML**. Pour une première prise en main, il est raisonnable de laisser l’option désactivée.
+  The rest of the workflow—transcription in **Visual** mode, translation, markup, and disambiguation—remains available. You can re-enable XML editing later: open **Settings** from the menu (**Grognard → Settings** on Mac, or **Settings** in the application menu on Windows and Linux; shortcut <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>,</kbd>), open the **Safeguards** tab, and enable **Allow direct editing of XML code**. For a first session, leaving this option disabled is reasonable.
 
-Grognard est une application de bureau : vos fichiers et vos données restent sur votre ordinateur. L’édition normale ne nécessite pas de compte et Grognard ne collecte pas vos données. Pour plus d’informations, consultez la [politique de confidentialité](/privacy).
+Grognard is a desktop application: your files and data remain on your computer. Normal editing does not require an account, and Grognard does not collect your data. For more information, see the [privacy policy](/privacy).
 
 <a id="mises-a-jour"></a>
-## 2. Mises à jour
+## 2. Updates
 
-Sous Windows et macOS, l’application Grognard reçoit et applique automatiquement les mises à jour pendant son utilisation. Sous Linux, téléchargez le paquet `.deb` mis à jour depuis la page [Télécharger](/download) (Debian et Ubuntu). Le contenu de ces mises à jour est documenté dans les [notes de version](https://github.com/grognard/grognard/releases).
+On Windows and macOS, Grognard receives and applies updates automatically while you use it. On Linux, download the updated `.deb` package from the [Download](/download) page (Debian and Ubuntu). The contents of these updates are documented in the [release notes](https://github.com/grognard/grognard/releases).
 
 <a id="projet"></a>
-## 3. Créer ou ouvrir un projet
+## 3. Create or open a project
 
-Pour commencer à éditer des documents, vous devez d’abord créer un projet ou ouvrir un projet existant. Pour cela, utilisez le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>O</kbd>, ou allez dans **Fichier → Ouvrir un projet**.
+To begin editing documents, first create a project or open an existing one. Use <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>O</kbd>, or choose **File → Open project**.
 
-Un projet n’est pas un simple fichier XML : c’est un dossier sur votre ordinateur qui rassemble les textes, le schéma, les traductions et la base de données des entités. C’est en ouvrant ce dossier comme projet que Grognard peut maintenir les liens entre ces différents éléments.
-
-<figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_disambiguation_schema_select.png"><img src="/images/screenshot_disambiguation_schema_select.png" alt="Dialogue de choix du schéma, ici TEI All"></a>
-  <figcaption>Choisir le schéma du projet</figcaption>
-</figure>
-
-Lorsque vous créez un nouveau projet, Grognard vous demande de choisir un schéma. Sauf si vous prévoyez de travailler de manière approfondie sur des textes bouddhiques de CBETA, ou si vous avez une autre raison précise de choisir une configuration particulière, sélectionnez le schéma par défaut : `TEI-ALL`.
-
-Un schéma est la grammaire de votre document : il définit les balises et les attributs autorisés, ainsi que la manière dont ils peuvent s’organiser. `TEI-ALL` est le schéma général proposé par défaut ; il convient à la plupart des projets.
+A project is not just an XML file: it is a folder on your computer containing the texts, schema, translations, and entity database. Opening this folder as a project allows Grognard to maintain the links between these elements.
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_disambiguation_project_settings.png"><img src="/images/screenshot_disambiguation_project_settings.png" alt="Paramètres du projet : langue source, base d’entités, traduction"></a>
-  <figcaption>Langue, entités, traduction</figcaption>
+  <a href="/images/screenshot_disambiguation_schema_select.png"><img src="/images/screenshot_disambiguation_schema_select.png" alt="Schema-selection dialog, showing TEI All"></a>
+  <figcaption>Choose the project schema</figcaption>
 </figure>
 
-Grognard vous demande ensuite de définir les paramètres du corpus du projet. Les plus importants sont les suivants :
+When you create a new project, Grognard asks you to choose a schema. Unless you plan to work extensively with CBETA Buddhist texts, or have another specific reason to choose a particular configuration, select the default schema: `TEI-ALL`.
+
+A schema is the grammar of your document: it defines the permitted tags and attributes, and how they may be organized. `TEI-ALL` is the general-purpose schema offered by default and is suitable for most projects.
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_project_settings.png"><img src="/images/screenshot_disambiguation_project_settings.png" alt="Project settings: source language, entity database, translation"></a>
+  <figcaption>Language, entities, translation</figcaption>
+</figure>
+
+Grognard then asks you to define the project corpus settings. The most important are:
 
 - **Langue source** : la langue de vos documents.
-- **Synchroniser les entités avec la base de données centrale** : désactivez cette option uniquement si vous travaillez sur un corpus de projet partagé avec d’autres utilisateurs.
-- **Traduction** (unité d’alignement) : l’unité dans laquelle vous souhaitez découper le texte pour la traduction. Choisissez **Paragraphe (1:1)** ou, pour les textes structurés uniquement par pages, **Ab (bloc anonyme, p. ex. folio)**.
+- **Sync entities with the central database:** disable this only if you are working on a project corpus shared with other users.
+- **Translation** (alignment unit): the unit into which you want to divide the text for translation. Choose **Paragraph (1:1)** or, for texts structured only by pages, **Ab (anonymous block, e.g. folio)**.
 - **Langues** : les langues vers lesquelles vous traduirez vos textes, dans la section **Traduction**.
 
-N’oubliez pas d’enregistrer vos paramètres avec le bouton situé en bas de la page.
+Remember to save your settings with the button at the bottom of the page.
 
-La première fois que vous créez ou ouvrez un projet dans une langue donnée, Grognard vous proposera d’installer les packs de ressources et les plugins prévus pour cette langue. Vous pourrez ensuite y accéder depuis **Paramètres → Packs de ressources** et **Paramètres → Plugins**.
+The first time you create or open a project in a given language, Grognard offers to install the resource packs and plugins intended for that language. You can later access them through **Settings → Resource packs** and **Settings → Plugins**.
 
 <a id="document"></a>
-## 4. Ouvrir un document
+## 4. Open a document
 
-Lorsque vous ouvrez un projet existant, ouvrez le **panneau de navigation des fichiers** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tab_explorer.png" alt="Explorateur de fichiers"> pour parcourir votre corpus. Un clic gauche ouvre un fichier. Un clic droit ouvre un menu contextuel qui permet de le renommer, de le déplacer ou de le supprimer.
+When you open an existing project, open the **file navigation panel** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tab_explorer.png" alt="File explorer"> to browse your corpus. A left click opens a file. A right click opens a context menu that lets you rename, move, or delete it.
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_disambiguation_new_doc.png"><img src="/images/screenshot_disambiguation_new_doc.png" alt="Création d’un nouveau document dans Grognard"></a>
-  <figcaption>Créer un nouveau document</figcaption>
+  <a href="/images/screenshot_disambiguation_new_doc.png"><img src="/images/screenshot_disambiguation_new_doc.png" alt="Creating a new document in Grognard"></a>
+  <figcaption>Create a new document</figcaption>
 </figure>
 
-Pour créer un nouveau fichier dans le projet courant, utilisez le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd>, ou choisissez **Fichier → Nouveau fichier**. Grognard crée le document à partir du squelette correspondant au schéma du projet. Lors du premier enregistrement, choisissez son nom et son emplacement dans le dossier du projet.
+To create a new file in the current project, use <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd>, or choose **File → New file**. Grognard creates the document from the template corresponding to the project schema. When you save it for the first time, choose its name and location within the project folder.
 
-Vous pouvez importer des fichiers locaux ainsi que des éditions numériques en ligne provenant de différentes sources et dans différents formats. Pour plus d’informations, consultez la page [Fichiers](/guide/fichiers).
+You can import local files as well as online digital editions from different sources and in different formats. For more information, see the [Files](/guide/fichiers) page.
 
-Pour une première prise en main, ouvrez seulement quelques paragraphes. Vous pourrez ainsi vérifier le résultat avant d’importer ou de modifier un corpus entier.
+For a first session, open only a few paragraphs. This lets you check the result before importing or modifying an entire corpus.
 
-Pour enregistrer un document, utilisez le bouton **Enregistrer** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/save.png" alt="Enregistrer"> ou le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd>. Enregistrez régulièrement, notamment après une modification du balisage ou des attributs, afin de conserver les changements dans le fichier du projet.
+To save a document, use the **Save** button <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/save.png" alt="Save"> or <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd>. Save regularly, especially after changing markup or attributes, so that your changes are preserved in the project file.
 
 <a id="visuel"></a>
-## 5. Écrire dans la vue visuelle
+## 5. Write in the visual view
 
-Vous pouvez écrire dans la vue visuelle pour créer ou modifier la transcription de votre source principale. À la différence d’un traitement de texte, Grognard ne cherche pas à vous laisser une liberté complète sur la manière de saisir et de mettre en forme vos textes. Ses fonctions sont volontairement sobres : l’objectif est de favoriser la simplicité, l’homogénéité et la lisibilité par la machine.
+Use the visual view to create or edit the transcription of your main source. Unlike a word processor, Grognard does not aim to give you complete freedom over how text is entered and formatted. Its features are deliberately restrained, favoring simplicity, consistency, and machine readability.
 
-Vous pouvez passer à tout moment du mode **Visuel** au mode **Source**. Le premier vous permet de travailler sur le texte sans devoir regarder le XML ; le second affiche la structure telle qu’elle sera enregistrée. Vous n’avez pas besoin de modifier le XML à la main au début, mais il est utile de savoir où le consulter lorsque vous voulez comprendre ou contrôler le document. Pour l’édition XML avancée, consultez la section [Monaco et l’éditeur XML](/guide/fonctions-avancees#editeur-xml).
+You can switch at any time between **Visual** and **Source** mode. The former lets you work on the text without looking at XML; the latter shows the structure as it will be saved. You do not need to edit XML by hand at first, but it is useful to know where to inspect it when you want to understand or control the document. For advanced XML editing, see [Monaco and the XML editor](/guide/fonctions-avancees#editeur-xml).
 
-### Structurer les paragraphes
+### Structure paragraphs
 
-Pour créer un nouveau paragraphe, placez le curseur à l’endroit voulu, appuyez sur <kbd>Entrée</kbd>, sélectionnez `p`, puis appuyez à nouveau sur <kbd>Entrée</kbd>. Lorsque vous copiez-collez du texte, Grognard encode automatiquement les séparations entre paragraphes.
+To create a new paragraph, place the cursor where you want it, press <kbd>Enter</kbd>, select `p`, then press <kbd>Enter</kbd> again. When you copy and paste text, Grognard automatically encodes paragraph breaks.
 
-### Signaler les changements éditoriaux
+### Mark editorial changes
 
-Pour ajouter, supprimer ou corriger un passage dans le cadre d’une édition critique, cliquez sur le bouton **Marquer des changements éditoriaux** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tool_correction.png" alt="Marquer des changements éditoriaux">. Un panneau s’ouvre pour vous permettre d’enregistrer la relation entre la forme originale et la forme corrigée.
+To add, remove, or correct a passage as part of a critical edition, click **Mark editorial changes** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tool_correction.png" alt="Mark editorial changes">. A panel opens where you can record the relationship between the original and corrected forms.
 
-Dans un texte comportant des corrections éditoriales, utilisez le bouton d’affichage des corrections pour faire défiler **Afficher l’original uniquement** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/history.png" alt="Afficher l’original uniquement">, **Afficher la correction uniquement** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/auto-fix.png" alt="Afficher la correction uniquement"> et **Afficher l’original et la correction** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/layers.png" alt="Afficher l’original et la correction">. Vous pouvez ainsi contrôler séparément la lecture de la source, la lecture éditée et leur présentation côte à côte.
+In a text containing editorial corrections, use the correction-display button to cycle through **Show original only** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/history.png" alt="Show original only">, **Show correction only** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/auto-fix.png" alt="Show correction only">, and **Show original and correction** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/layers.png" alt="Show original and correction">. This lets you review the source reading, edited reading, and side-by-side presentation separately.
 
-### Verrouiller la source principale
+### Lock the main source
 
-À mesure que votre travail avance, vous n’aurez plus besoin de saisir ou de modifier la source principale. La présence du texte dans un éditeur libre peut alors devenir un risque : une saisie accidentelle ou une opération « rechercher et remplacer » pourrait modifier sa formulation.
+As your work progresses, you may no longer need to enter or modify the main source. Keeping the text in an editable field can then become a risk: an accidental keystroke or a “find and replace” operation could alter its wording.
 
-Pour protéger la source, cliquez sur le bouton **Verrouiller le texte** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/lock-open.png" alt="Verrouiller le texte">. Le texte ne peut alors plus être saisi ni supprimé, tandis que les opérations de balisage restent disponibles. L’icône devient un cadenas fermé <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/lock.png" alt="Texte verrouillé">. Vous pourrez le déverrouiller lorsque vous devrez reprendre la transcription.
+To protect the source, click **Lock text** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/lock-open.png" alt="Lock text">. The text can no longer be edited or deleted, while markup operations remain available. The icon changes to a closed padlock <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/lock.png" alt="Text locked">. You can unlock it when you need to resume the transcription.
 
 <a id="traduction"></a>
-## 6. Traduire dans le panneau de traduction
+## 6. Translate in the translation pane
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_translation.png"><img src="/images/screenshot_translation.png" alt="Panneau de traduction à côté du texte source"></a>
-  <figcaption>Le panneau de traduction</figcaption>
+  <a href="/images/screenshot_translation.png"><img src="/images/screenshot_translation.png" alt="Translation pane beside the source text"></a>
+  <figcaption>The translation pane</figcaption>
 </figure>
 
-Cliquez sur l’icône du **panneau de traduction** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/translate.png" alt="Traduction"> pour l’ouvrir.
+Click the **translation pane** icon <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/translate.png" alt="Translation"> to open it.
 
-Grognard conserve les traductions séparément de la source principale, tout en les attachant au même texte source. Vous pouvez ainsi rédiger plusieurs traductions parallèles, dans plusieurs langues, sans dupliquer ni modifier la source.
+Grognard keeps translations separate from the main source while attaching them to the same source text. You can therefore write several parallel translations in different languages without duplicating or modifying the source.
 
-Le panneau de traduction intègre un correcteur orthographique et grammatical fourni par LanguageTool. La vérification grammaticale nécessite l’installation de Java. Pour en savoir plus sur les aides linguistiques, consultez les [fonctions avancées](/guide/fonctions-avancees#traduction).
+The translation pane includes spelling and grammar checking powered by LanguageTool. Grammar checking requires Java. For more about language assistance, see [Advanced features](/guide/fonctions-avancees#traduction).
 
-Vous y trouverez également les fonctions essentielles d’un traitement de texte pour produire une traduction savante : mise en forme, notes de bas de page et intégration avec Zotero.
+It also provides the essential word-processing features needed for a scholarly translation: formatting, footnotes, and Zotero integration.
 
-Si vous disposez d’une clé d’API, le panneau de traduction peut aussi générer une proposition de traduction à l’aide d’un service d’IA. Cette fonction est facultative ; son fonctionnement et ses précautions sont présentés dans les [fonctions avancées](/guide/fonctions-avancees#ia).
+If you have an API key, the translation pane can also generate a translation suggestion using an AI service. This feature is optional; its operation and safeguards are described in [Advanced features](/guide/fonctions-avancees#ia).
 
 <a id="balisage"></a>
-## 7. Baliser le texte
+## 7. Mark up the text
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_tagging_manual.png"><img src="/images/screenshot_tagging_manual.png" alt="Sélection d’un passage et choix d’une balise dans Grognard"></a>
-  <figcaption>Balisage manuel</figcaption>
+  <a href="/images/screenshot_tagging_manual.png"><img src="/images/screenshot_tagging_manual.png" alt="Selecting a passage and choosing a tag in Grognard"></a>
+  <figcaption>Manual markup</figcaption>
 </figure>
 
-Grognard est avant tout un outil de balisage XML destiné à l’extraction et à l’analyse des données en humanités numériques. Il automatise toutefois les opérations fastidieuses de ce travail et rend immédiatement utiles les balises que vous ajoutez.
+Grognard is first and foremost an XML markup tool for extracting and analyzing data in the digital humanities. It automates the tedious parts of this work and makes the tags you add immediately useful.
 
-Même si votre objectif n’est pas de transformer votre texte en données structurées, il est utile d’en identifier les principales entités : personnes, lieux, œuvres, dates, organisations et titres officiels. Vous pouvez le faire manuellement en sélectionnant un mot, en appuyant sur <kbd>Entrée</kbd>, puis en choisissant la catégorie correspondante. Vous pouvez également automatiser l’opération avec le bouton **Balisage automatique** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tag-plus.png" alt="Balisage automatique">, qui propose de traiter l’ensemble du texte.
+Even if you do not intend to turn your text into structured data, identifying its main entities is useful: people, places, works, dates, organizations, and official titles. Do this manually by selecting a word, pressing <kbd>Enter</kbd>, and choosing the relevant category. You can also automate the process with **Automatic markup** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tag-plus.png" alt="Automatic markup">, which offers to process the entire text.
 
-### Le « tag bomb »
+### The “tag bomb”
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_tagging_bomb.png"><img src="/images/screenshot_tagging_bomb.png" alt="Fenêtre de configuration du balisage automatique par listes"></a>
-  <figcaption>Balisage par listes</figcaption>
+  <a href="/images/screenshot_tagging_bomb.png"><img src="/images/screenshot_tagging_bomb.png" alt="Configuration window for list-based automatic markup"></a>
+  <figcaption>List-based markup</figcaption>
 </figure>
 
-Le premier mode d’auto-balisage, le « tag bomb », recherche mécaniquement dans le texte toutes les occurrences des mots présents dans votre base personnelle, dans les tables fournies par Grognard et dans les packs de ressources linguistiques. Ces listes peuvent contenir des milliers d’entrées. Les packs sont constitués à partir de bases d’autorités ouvertes : Wikidata, la BnF/NDL, CBDB, DILA, CHGIS, VIAF, BDRC et Norbert.
+The first automatic-markup mode, the “tag bomb,” mechanically searches the text for every occurrence of words found in your personal database, Grognard’s built-in tables, and language-resource packs. These lists may contain thousands of entries. The packs are assembled from open authority databases: Wikidata, BnF/NDL, CBDB, DILA, CHGIS, VIAF, BDRC, and Norbert.
 
-### Les suggestions par IA
+### AI suggestions
 
-Le second mode, **Suggestions par IA**, transmet votre source à un modèle de langage afin qu’il en propose le balisage. Le modèle voit le texte source, mais ne le modifie jamais directement. Il fournit une carte ou une liste de correspondances que Grognard utilise ensuite pour poser mécaniquement les balises, sans changer les mots, la ponctuation ni la segmentation du document.
+The second mode, **AI suggestions**, sends your source to a language model so it can suggest markup. The model sees the source text but never modifies it directly. It returns a map or list of correspondences that Grognard uses to place tags mechanically, without changing the document’s words, punctuation, or segmentation.
 
-### Valider les propositions
+### Review suggestions
 
 <figure class="guide-screenshot-thumb">
   <a href="/images/screenshot_tagging_validation.png"><img src="/images/screenshot_tagging_validation.png" alt="Panneau de validation des suggestions de balisage"></a>
-  <figcaption>Relire les suggestions</figcaption>
+  <figcaption>Review suggestions</figcaption>
 </figure>
 
-Après l’auto-balisage, Grognard vous demande de valider les résultats afin d’écarter les faux positifs. La vérification est conçue pour rester rapide : appuyez sur <kbd>Entrée</kbd> pour accepter, sur <kbd>Retour arrière</kbd> pour refuser, sur <kbd>Maj</kbd> + <kbd>Entrée</kbd> pour accepter toutes les occurrences et sur <kbd>Maj</kbd> + <kbd>Retour arrière</kbd> pour les refuser toutes.
+After automatic markup, Grognard asks you to review the results and discard false positives. The review is designed to be quick: press <kbd>Enter</kbd> to accept, <kbd>Backspace</kbd> to reject, <kbd>Shift</kbd> + <kbd>Enter</kbd> to accept all occurrences, or <kbd>Shift</kbd> + <kbd>Backspace</kbd> to reject them all.
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_highlighting.png"><img src="/images/screenshot_highlighting.png" alt="Panneau de réglage des couleurs des balises"></a>
-  <figcaption>Lire les balises visuellement</figcaption>
+  <a href="/images/screenshot_highlighting.png"><img src="/images/screenshot_highlighting.png" alt="Panel for adjusting tag colors"></a>
+  <figcaption>Read tags visually</figcaption>
 </figure>
 
-Une fois les éléments de base identifiés, ouvrez le **panneau CSS** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tab_highlight.png" alt="CSS">. Vous pourrez y choisir les couleurs du texte et des surlignages afin de distinguer visuellement les différentes catégories d’entités.
+Once the basic elements have been identified, open the **CSS panel** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/tab_highlight.png" alt="CSS">. You can choose text and highlight colors there to distinguish the different entity categories visually.
 
 <a id="desambiguïser"></a>
-## 8. Désambiguïser les entités
+## 8. Disambiguate entities
 
-Le balisage indique qu’un passage désigne une personne, un lieu, une œuvre ou une autre catégorie d’entité. La **désambiguïsation** consiste à préciser de quelle entité il s’agit en lui associant un identifiant stable. Elle distingue ainsi une forme de surface — les mots présents dans le document — de la chose à laquelle ces mots renvoient.
+Markup indicates that a passage refers to a person, place, work, or another type of entity. **Disambiguation** specifies which entity it is by associating it with a stable identifier. This distinguishes a surface form—the words present in the document—from the thing those words refer to.
 
-Cette distinction est essentielle pour produire des données structurées. Un même personnage peut être mentionné sous plusieurs noms, tandis que plusieurs personnes peuvent porter le même nom. Sans identifiant, une machine ne peut compter que des chaînes de caractères ; avec un identifiant, elle peut regrouper les mentions qui renvoient à la même entité, les distinguer de leurs homonymes et les relier à des informations complémentaires.
+This distinction is essential for producing structured data. The same character may be mentioned under several names, while several people may share the same name. Without an identifier, a machine can count only character strings; with one, it can group mentions that refer to the same entity, distinguish them from namesakes, and link them to additional information.
 
-Pour faire cela correctement, il faudrait construire et maintenir une base de données relationnelle : définir sa structure, attribuer des identifiants uniques, regrouper les variantes, établir les concordances entre autorités, corriger les doublons et préserver la cohérence de l’ensemble au fil des projets. C’est un investissement considérable, généralement disproportionné pour une personne ou une équipe qui souhaite simplement éditer un corpus.
+Doing this properly would require building and maintaining a relational database: defining its structure, assigning unique identifiers, grouping variants, creating concordances between authorities, correcting duplicates, and preserving consistency across projects. That is a considerable investment, generally disproportionate for a person or team that simply wants to edit a corpus.
 
-C’est précisément ce que Grognard fait pour vous. L’application crée une base d’entités locale pour votre projet, prête à être utilisée hors connexion. Elle attribue les identifiants, conserve les différentes formes de surface d’une même entité et peut établir des concordances avec les autorités que vous avez choisies. Aucune autorité n’étant complète, vous pouvez également créer une fiche lorsque l’entité recherchée n’existe pas encore, ou compléter une fiche pour les besoins particuliers de votre corpus.
+That is precisely what Grognard does for you. The application creates a local entity database for your project, ready to use offline. It assigns identifiers, preserves the different surface forms of an entity, and can build concordances with the authorities you have chosen. No authority is complete, so you can also create a record when the entity you need does not yet exist, or add to a record for the particular needs of your corpus.
 
-### Faire le lien
-
-<figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_disambiguation.png"><img src="/images/screenshot_disambiguation.png" alt="Panneau Désambiguïser avec des candidats à comparer"></a>
-  <figcaption>Comparer les candidats</figcaption>
-</figure>
-
-Après avoir balisé une mention, cliquez sur **Désambiguïser** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/disambiguate.png" alt="Désambiguïsation">. Pour chaque forme balisée, Grognard vous propose les entités correspondantes dans les autorités activées dans vos paramètres. Examinez les propositions — notamment lorsqu’il existe des homonymes — puis choisissez la bonne entité. Si aucune proposition ne convient, créez une nouvelle entité dans votre base.
+### Make the link
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_lookup.png"><img src="/images/screenshot_lookup.png" alt="Recherche d’une entité dans les autorités"></a>
-  <figcaption>Rechercher dans les autorités</figcaption>
+  <a href="/images/screenshot_disambiguation.png"><img src="/images/screenshot_disambiguation.png" alt="Disambiguation panel with candidates to compare"></a>
+  <figcaption>Compare candidates</figcaption>
 </figure>
 
-Vous pouvez aussi effectuer cette recherche depuis le panneau **Attributs** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/label.png" alt="Attributs">. Le lien est enregistré dans le document sous la forme d’un attribut d’identification, tandis que la fiche complète de l’entité reste dans la base du projet.
+After marking up a mention, click **Disambiguate** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/disambiguate.png" alt="Disambiguation">. For each marked-up form, Grognard suggests matching entities from the authorities enabled in your settings. Review the suggestions—especially where namesakes exist—then choose the correct entity. If none is suitable, create a new entity in your database.
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_disambiguation_map.png"><img src="/images/screenshot_disambiguation_map.png" alt="Carte de désambiguïsation des lieux"></a>
-  <figcaption>Comparer les lieux sur la carte</figcaption>
+  <a href="/images/screenshot_lookup.png"><img src="/images/screenshot_lookup.png" alt="Search for an entity in the authorities"></a>
+  <figcaption>Search the authorities</figcaption>
 </figure>
 
-Les lieux proches peuvent aussi se comparer sur une carte, lorsque le type d’entité s’y prête.
+You can also perform this search from the **Attributes** panel <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/label.png" alt="Attributes">. The link is saved in the document as an identification attribute, while the entity’s full record remains in the project database.
+
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_disambiguation_map.png"><img src="/images/screenshot_disambiguation_map.png" alt="Place-disambiguation map"></a>
+  <figcaption>Compare places on the map</figcaption>
+</figure>
+
+Nearby places can also be compared on a map when the entity type supports it.
 
 <a id="pourquoi-faire"></a>
-## 9. Pourquoi faire ?
+## 9. Why use it?
 
-### 1. Une base de données pour le reste
-
-<figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_db_viewer.png"><img src="/images/screenshot_db_viewer.png" alt="Fenêtre de la base d’entités"></a>
-  <figcaption>Consulter vos fiches</figcaption>
-</figure>
-
-Une fois une balise désambiguïsée, il n’est plus nécessaire de repartir de Google pour retrouver les informations sur une personne, un ouvrage, un toponyme ou une autre entité. Les données de base, les variantes et les liens vers les autorités sont centralisés dans votre propre base, consultable hors connexion. Le panneau **Base d’entités** <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/database.png" alt="Base d’entités"> vous permet également d’ajouter des notes à chaque fiche, à l'instar de Zotero — mais pas juste pour les ouvrages.
-
-### 2. Une extension pour les traitements de texte
+### 1. A database for everything else
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_word_plugin.png"><img src="/images/screenshot_word_plugin.png" alt="Extension Grognard dans un traitement de texte"></a>
-  <figcaption>Réutiliser vos entités dans Word</figcaption>
+  <a href="/images/screenshot_db_viewer.png"><img src="/images/screenshot_db_viewer.png" alt="Entity database window"></a>
+  <figcaption>Browse your records</figcaption>
 </figure>
 
-Lorsque vous rédigez un article, ressaisir et mettre en forme les noms, les sinogrammes, les traductions et les dates de chaque entité peut être aussi fastidieux que l’étaient autrefois les bibliographies. L’extension Grognard pour **Word** (version de bureau, encore expérimentale) automatise ce travail à partir de votre base d’entités, « à la Zotero ». Les intégrations **LibreOffice** et **OnlyOffice** sont prévues, mais ne sont pas encore distribuées.
+Once a tag has been disambiguated, you no longer need to return to Google to find information about a person, work, place name, or other entity. Basic data, variants, and authority links are centralized in your own database, which you can consult offline. The **Entity database** panel <img class="guide-ui-icon" src="/user/themes/lejeanbaptiste/images/ui-icons/database.png" alt="Entity database"> also lets you add notes to each record, much like Zotero—but not only for books.
 
-### 3. Une traduction IA mieux maîtrisée
+### 2. An extension for word processors
 
-Les outils d’IA traduisent de mieux en mieux les textes historiques. Ils traitent cependant souvent de manière superficielle, voire trompeuse, les données qui nous sont les plus précieuses : l’identification, la compréhension, la traduction exacte et la mise en forme des dates, des noms propres et des titres. Une fois le texte balisé et désambiguïsé, Grognard remplace les entités par des variables dans le texte soumis à l’IA. Celle-ci traduit le texte autour de ces variables, puis Grognard réinsère les entités sous forme de champs. Vous pouvez ainsi définir la traduction et la mise en forme à appliquer à l’ensemble de votre corpus, sans laisser le modèle réécrire vos données sensibles.
+<figure class="guide-screenshot-thumb">
+  <a href="/images/screenshot_word_plugin.png"><img src="/images/screenshot_word_plugin.png" alt="Grognard extension in a word processor"></a>
+  <figcaption>Reuse your entities in Word</figcaption>
+</figure>
 
-Pour les textes chinois et japonais, les dates peuvent être traitées avec une précision particulière grâce à une version locale de [Sanmiao](https://github.com/PotatoSinology/sanmiao) (Daniel Patrick Morgan), convertisseur conçu pour les exigences scientifiques de l’histoire de l’astronomie.
+When writing an article, retyping and formatting the names, Chinese characters, translations, and dates for each entity can be as tedious as bibliographies once were. The Grognard extension for **Word** (desktop version, still experimental) automates this work from your entity database, “Zotero-style.” **LibreOffice** and **OnlyOffice** integrations are planned but are not yet distributed.
 
-Les titres officiels bénéficient d’un traitement comparable. Grognard ne redistribue pas le dictionnaire de Hucker ni ses traductions. Lorsque les packs sinologiques s’appuient sur des données auxquelles ils peuvent légalement accéder, celles-ci sont exploitées localement pour produire des ressources de travail. Les systèmes **HuckBot5000** (anglais) et **MaxiRicci7000** (français) sont des modèles et des algorithmes entraînés pour prolonger cette méthode de traduction « à la Hucker » ; ils ne sont pas une redistribution du dictionnaire lui-même. Une fois les titres balisés et désambiguïsés, ils peuvent donc être traduits de manière homogène à l’échelle du corpus.
+### 3. More controlled AI translation
 
-Une entité correctement identifiée n’est donc pas seulement plus facile à retrouver : elle devient une donnée réutilisable dans vos traductions, vos articles et vos analyses.
+AI tools are increasingly good at translating historical texts. They often handle the data most valuable to us superficially or misleadingly, however: the identification, understanding, exact translation, and formatting of dates, proper names, and titles. Once the text has been marked up and disambiguated, Grognard replaces entities with variables in the text sent to the AI. The AI translates the surrounding text, and Grognard then re-inserts the entities as fields. You can therefore define translation and formatting consistently across your corpus without allowing the model to rewrite sensitive data.
 
-### 4. Votre projet d'humanités numériques
+For Chinese and Japanese texts, dates can be handled with particular precision using a local version of [Sanmiao](https://github.com/PotatoSinology/sanmiao) (Daniel Patrick Morgan), a converter designed for the scholarly requirements of the history of astronomy.
 
-Au cœur de tout projet d’humanités numériques se trouvent des données structurées. En travaillant avec Grognard, vous les produisez au fil de votre lecture, de votre transcription et de vos traductions : elles sont balisées, désambiguïsées et contrôlées par un être humain, même si votre objectif reste celui d’un projet traditionnel.
+Official titles receive similar treatment. Grognard does not redistribute Hucker’s dictionary or its translations. When sinological packs draw on data they can legally access, that data is used locally to produce working resources. **HuckBot5000** (English) and **MaxiRicci7000** (French) are models and algorithms trained to extend this “Hucker-style” translation method; they are not a redistribution of the dictionary itself. Once titles are marked up and disambiguated, they can be translated consistently throughout the corpus.
 
-La désambiguïsation débloque plusieurs usages :
+A correctly identified entity is therefore not only easier to find; it becomes reusable data for your translations, articles, and analyses.
 
-- retrouver toutes les mentions d’une même personne, d’un lieu ou d’une œuvre, même lorsque sa forme change ;
-- centraliser des informations, des variantes, des liens d’autorité et des notes dans votre base d’entités ;
-- réutiliser ces données dans vos traductions, vos articles et vos traitements de texte ;
-- préparer des recherches, des listes, des tableaux, des chronologies ou des cartes à partir du corpus.
+### 4. Your digital-humanities project
 
-Les questions que vous poserez, les analyses que vous conduirez et les formes que prendra votre résultat vous appartiennent. Elles demanderont peut-être du code propre à votre projet. Mais vous aurez déjà accompli la partie la plus longue et la plus difficile : transformer votre travail sur les sources en un ensemble de données lisible, vérifiable et réutilisable.
+Structured data lies at the heart of every digital-humanities project. Working with Grognard, you produce it as you read, transcribe, and translate: the data is marked up, disambiguated, and checked by a human, even if your ultimate goal remains a traditional project.
 
-Pour comprendre où vivent ces entités et comment les entretenir, consultez la page [Base de données](/guide/base-de-donnees).
+Disambiguation enables several uses:
+
+- find every mention of the same person, place, or work, even when its form changes;
+- centralize information, variants, authority links, and notes in your entity database;
+- reuse this data in your translations, articles, and word-processing documents;
+- prepare searches, lists, tables, timelines, or maps from the corpus.
+
+The questions you ask, the analyses you conduct, and the forms your results take are yours. They may require code specific to your project. But you will already have completed the longest and hardest part: turning your work on primary sources into data that is readable, verifiable, and reusable.
+
+To understand where these entities live and how to maintain them, see the [Database](/guide/base-de-donnees) page.

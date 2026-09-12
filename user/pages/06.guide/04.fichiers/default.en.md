@@ -1,129 +1,129 @@
 ---
-title: Fichiers
-menu: Fichiers
+title: Files
+menu: Files
 visible: false
 template: guide-detail
 guide_portrait: guide-files.png
-guide_intro: "Comprendre ce qui entre dans un projet, importer des sources et protéger votre travail."
+guide_intro: "Understand what belongs in a project, import sources, and protect your work."
 guide_toc:
-  - { id: projet, label: Contenu d’un projet }
-  - { id: operations, label: Opérations courantes }
-  - { id: locaux, label: Fichiers locaux }
-  - { id: web, label: Sources web }
+  - { id: projet, label: Project contents }
+  - { id: operations, label: Common operations }
+  - { id: locaux, label: Local files }
+  - { id: web, label: Web sources }
   - { id: plugins, label: Plugins }
-  - { id: sauvegarder, label: Sauvegarder }
-  - { id: exporter, label: Exporter }
-  - { id: continuer, label: Continuer }
+  - { id: sauvegarder, label: Back up }
+  - { id: exporter, label: Export }
+  - { id: continuer, label: Continue }
 ---
 
 <a id="projet"></a>
-## 1. Ce que contient un projet
+## 1. What a project contains
 
-Un projet Grognard est un dossier, et non un fichier isolé. Il rassemble les éléments qui doivent rester liés pour que l’édition reste lisible et réutilisable :
+ A Grognard project is a folder, not an isolated file. It brings together the elements that must remain linked so the edition stays readable and reusable:
 
 ```text
 mon-projet/
-  mon-projet.project.json    manifeste du projet
-  documents/                 textes XML du corpus
-  schema/                    schéma, CSS et réglages du projet
-  traduction.fr.xml          fichier compagnon d’une source
-  .grognard/                 historique local et métadonnées cachées
+  my-project.project.json    project manifest
+  documents/                 corpus XML texts
+  schema/                    project schema, CSS, and settings
+  translation.en.xml         companion file for a source
+  .grognard/                 local history and hidden metadata
 ```
 
-- **Vos textes** : les fichiers XML TEI — ou conformes à un autre schéma — dans les dossiers que vous choisissez.
-- **`schema/`** : la grammaire du projet, ses fichiers RNG et CSS, ainsi que certains réglages. Elle est installée lors de la création du projet ; ne la remplacez pas machinalement par celle d’un autre projet.
-- **Les traductions** : des fichiers compagnons séparés de la source, mais reliés à ses unités. Ils doivent voyager avec elle.
-- **Les données d’entités** : une base locale comprenant `entities.sqlite`, `entities.xml` et les fichiers associés, ou les données du projet liées à la base centrale choisie lors du premier lancement. La base centrale, elle, se trouve en dehors du dossier du projet.
-- **L’historique** : les instantanés et fichiers de récupération de Grognard, généralement conservés dans un dossier caché du projet. Ne les modifiez pas directement.
+- **Your texts:** XML TEI files—or files conforming to another schema—in the folders you choose.
+- **`schema/`:** the project grammar, its RNG and CSS files, and certain settings. It is installed when the project is created; do not casually replace it with the schema from another project.
+- **Translations:** companion files separate from the source but linked to its units. They must travel with it.
+- **Entity data:** a local database containing `entities.sqlite`, `entities.xml`, and related files, or project data linked to the central database chosen on first launch. The central database itself is outside the project folder.
+- **History:** Grognard snapshots and recovery files, generally stored in a hidden project folder. Do not edit them directly.
 
-Ne choisissez pas le dossier de base d’entités comme projet et ne sortez pas un XML seul de son dossier en espérant conserver ses traductions, son schéma et ses identifiants. Pour déplacer un corpus, le compresser, le copier sur une clé USB ou le versionner avec Git, déplacez toujours le dossier entier.
+Do not choose the entity-database folder as the project, and do not remove a single XML file from its folder expecting to preserve its translations, schema, and identifiers. To move, compress, copy to a USB drive, or version a corpus with Git, always move the entire folder.
 
-Les fichiers compagnons de traduction suivent la source lorsqu’elle est renommée ou déplacée dans l’Explorateur. La suppression d’une source peut également proposer la suppression de ses compagnons : vérifiez la confirmation avant de poursuivre.
+Translation companion files follow the source when it is renamed or moved in the Explorer. Deleting a source may also offer to delete its companions; check the confirmation before continuing.
 
 <a id="operations"></a>
-## 2. Les opérations courantes
+## 2. Common operations
 
-Dans le **panneau de navigation des fichiers**, un clic gauche ouvre un document. Un clic droit ouvre un menu contextuel qui permet de le renommer, de le déplacer ou de le supprimer.
+In the **file navigation panel**, a left click opens a document. A right click opens a context menu that lets you rename, move, or delete it.
 
-Pour créer un document, utilisez **Fichier → Nouveau fichier** ou <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd>. Grognard part du squelette correspondant au schéma actif ; lors du premier enregistrement, choisissez un nom et un emplacement à l’intérieur du projet.
+To create a document, choose **File → New file** or press <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>N</kbd>. Grognard starts from the template matching the active schema; when you save for the first time, choose a name and location within the project.
 
-Le raccourci <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd> enregistre le document courant. Plusieurs documents peuvent rester ouverts dans des onglets : fermer un onglet ne ferme pas le projet et ne supprime pas le fichier.
+The shortcut <kbd>⌘</kbd>/<kbd>Ctrl</kbd> + <kbd>S</kbd> saves the current document. Several documents can remain open in tabs: closing a tab does not close the project or delete the file.
 
 <a id="locaux"></a>
-## 3. Importer des fichiers locaux
+## 3. Import local files
 
-Choisissez **Fichier → Importer des documents** pour importer un fichier, plusieurs fichiers ou un dossier. Grognard peut convertir notamment des fichiers TXT, Markdown, RTF, Word (`.docx`), ODT et XML vers la structure du projet.
+Choose **File → Import documents** to import one file, several files, or a folder. Grognard can convert TXT, Markdown, RTF, Word (`.docx`), ODT, and XML files into the project structure.
 
-La conversion reconnaît les paragraphes et certaines structures élémentaires. Elle ne remplace pas le travail éditorial : elle ne décide pas à votre place du balisage précis, des identifiants d’entités ou des corrections de la source.
+The conversion recognizes paragraphs and some basic structures. It does not replace editorial work: it does not decide the precise markup, entity identifiers, or source corrections for you.
 
-Si vous importez un XML provenant d’un autre projet, les identifiants `@key` étrangers sont conservés à l’écart plutôt que réutilisés aveuglément. Vérifiez ensuite les liens et les entités dans le projet cible.
+If you import XML from another project, foreign `@key` identifiers are kept separate rather than reused blindly. Then check the links and entities in the target project.
 
-Après tout import, ouvrez au moins un résultat en vue visuelle et contrôlez les paragraphes, les caractères, les métadonnées et la structure Source avant de lancer une opération sur l’ensemble du corpus.
+After any import, open at least one result in Visual view and check the paragraphs, characters, metadata, and Source structure before operating on the entire corpus.
 
-> **À vérifier avant de généraliser.** Un import qui réussit prouve seulement qu’un fichier a été produit. Ouvrez un échantillon, comparez-le à la source, vérifiez sa provenance et sa validation, puis seulement importez ou transformez le reste du corpus.
+> **Check before scaling up.** A successful import proves only that a file was produced. Open a sample, compare it with the source, verify its provenance and validation, and only then import or transform the rest of the corpus.
 
 <a id="web"></a>
-## 4. Importer depuis le Web
+## 4. Import from the web
 
 ### Wikisource
 
-La commande **Fichier → Importer depuis Wikisource…** permet de choisir ou de coller une page et d’en écrire une version TEI dans le projet. Elle fonctionne sans extension de navigateur.
+The **File → Import from Wikisource…** command lets you choose or paste a page and write a TEI version of it into the project. It works without a browser extension.
 
-L’extension Grognard pour navigateur est un raccourci pratique pour envoyer des pages Wikisource, Kanripo ou BDRC vers l’application. Pour l’installer, consultez les instructions de la page [Télécharger](/download). Démarrez Grognard au moins une fois afin que la messagerie native soit enregistrée.
+The Grognard browser extension is a convenient shortcut for sending Wikisource, Kanripo, or BDRC pages to the application. To install it, follow the instructions on the [Download](/download) page. Start Grognard at least once so that native messaging can be registered.
 
-Dans Chromium, chargez l’extension décompressée depuis la page des extensions en activant le mode développeur. Dans Firefox, chargez temporairement `manifest.json` depuis `about:debugging` ; ce chargement est retiré au redémarrage du navigateur.
+In Chromium, load the unzipped extension from the extensions page with Developer mode enabled. In Firefox, temporarily load `manifest.json` from `about:debugging`; it will be removed when the browser restarts.
 
 <a id="plugins"></a>
-## 5. Les plugins d’importation
+## 5. Import plugins
 
-Les commandes de corpus apparaissent dans le menu **Fichier** seulement après l’activation du plugin correspondant dans **Paramètres → Plugins**. Grognard peut proposer les packs et plugins adaptés lorsque vous ouvrez pour la première fois un projet en chinois, en chinois classique ou en tibétain.
+Corpus commands appear in the **File** menu only after you enable the corresponding plugin under **Settings → Plugins**. Grognard may suggest suitable packs and plugins when you first open a project in Chinese, Classical Chinese, or Tibetan.
 
-| Plugin | Pour quel usage ? | Résultat |
+| Plugin | What is it for? | Result |
 | --- | --- | --- |
-| **Kanripo** | Textes chinois prémodernes de la Kanseki Repository | Une œuvre est récupérée puis chaque *juan* devient un fichier TEI du projet. Les outils de segmentation et de ponctuation viennent ensuite. |
-| **CBETA** | Canon bouddhique chinois | Le corpus est récupéré et découpé par *juan* ; le CBETA P5 est converti vers le TEI du projet. Le schéma peut alors appartenir à la famille CBETA plutôt qu’à `TEI-ALL`. |
-| **Daozang** | Textes taoïstes du corpus Fang Tongzi | Le corpus fourni localement est converti sans téléchargement depuis un service tiers. |
-| **BDRC** | Textes tibétains de BUDA | Un volume est récupéré en ligne puis converti en TEI dans le projet. |
+| **Kanripo** | Premodern Chinese texts from the Kanseki Repository | A work is retrieved, and each *juan* becomes a TEI file in the project. Segmentation and punctuation tools can then be applied. |
+| **CBETA** | Chinese Buddhist canon | The corpus is retrieved and divided by *juan*; CBETA P5 is converted to the project’s TEI. The schema may then belong to the CBETA family rather than `TEI-ALL`. |
+| **Daozang** | Taoist texts from the Fang Tongzi corpus | The locally supplied corpus is converted without downloading from a third-party service. |
+| **BDRC** | Tibetan texts from BUDA | A volume is retrieved online and converted to TEI in the project. |
 
-Ces imports n’ont pas le même fonctionnement : Kanripo, CBETA et BDRC utilisent des ressources en ligne ou les synchronisent, tandis que Daozang peut fonctionner à partir d’un corpus fourni localement. Récupérer un canon peut prendre du temps et produire de nombreux fichiers ; vérifiez un *juan* ou un volume avant de généraliser. Conservez la provenance et les identifiants de la source dans l’édition : Grognard facilite l’import, mais ne devient pas l’édition originale.
+These imports do not work in the same way: Kanripo, CBETA, and BDRC use or synchronize online resources, while Daozang can work from a locally supplied corpus. Retrieving a canon may take time and produce many files; check one *juan* or volume before scaling up. Preserve the source’s provenance and identifiers in the edition: Grognard facilitates import but does not become the original edition.
 
-Les autres plugins, notamment ceux qui concernent les autorités et les dates est-asiatiques, se gèrent depuis **Paramètres → Plugins**. Ils ne sont pas nécessaires pour comprendre l’organisation des fichiers.
+Manage other plugins, including those for authorities and East Asian dates, under **Settings → Plugins**. They are not required to understand how files are organized.
 
 <a id="sauvegarder"></a>
-## 6. Sauvegarder et récupérer son travail
+## 6. Back up and recover your work
 
-### Enregistrer souvent
+### Save often
 
-Enregistrez après une série de décisions cohérentes, avant une recherche-remplacement globale, avant une modification de schéma et avant une opération automatique sur plusieurs fichiers.
+Save after a coherent series of decisions, before a global find-and-replace, before changing the schema, and before an automated operation across multiple files.
 
-### Utiliser l’historique de Grognard
+### Use Grognard history
 
-Le menu **Time Machine** de Grognard conserve des instantanés et permet de restaurer un fichier ou un état du projet. Il s’agit de l’historique de Grognard, pas de l’application Time Machine d’Apple. Une restauration de projet et une restauration de fichier ne portent pas sur le même périmètre.
+Grognard’s **Time Machine** menu keeps snapshots and lets you restore a file or project state. This is Grognard’s own history, not Apple’s Time Machine application. Restoring a project and restoring a file affect different scopes.
 
-Les instantanés sont créés après un enregistrement réussi lorsqu’un fichier a réellement changé ; les réenregistrements identiques ne remplissent donc pas l’historique. **Fichier → Historique…** restaure un fichier, tandis que **Projet → Restaurer…** restaure plusieurs fichiers à un état donné. L’historique est local, dédoublonné et soumis à des limites de rétention : il complète Git ou une copie externe, mais ne les remplace pas.
+Snapshots are created after a successful save when a file has actually changed; saving identical content does not fill the history. **File → History…** restores a file, while **Project → Restore…** restores several files to a given state. History is local, deduplicated, and subject to retention limits: it complements Git or an external copy but does not replace them.
 
-Si la base d’entités centrale se trouve en dehors du projet, restaurer les textes ne restaure pas automatiquement cette base — et inversement. Un document peut alors contenir des clés qui ne correspondent plus à l’état de la base : laissez les fichiers intacts et restaurez la bonne copie de la base séparément.
+If the central entity database is outside the project, restoring the texts does not automatically restore that database—and vice versa. A document may then contain keys that no longer match the database state: leave the files intact and restore the correct database copy separately.
 
-### Garder une copie indépendante
+### Keep an independent copy
 
-Conservez aussi une copie du dossier sur un autre disque, avec la véritable Time Machine de macOS, ou sur un support externe. Si vous utilisez Git, versionnez le dossier du projet et documentez soigneusement les fichiers générés que vous choisissez d’exclure.
+Also keep a copy of the folder on another disk, using macOS’s actual Time Machine, or on external media. If you use Git, version the project folder and carefully document any generated files you choose to exclude.
 
-Évitez de faire écrire simultanément deux personnes dans un même dossier vivant, en particulier dans une base SQLite synchronisée par Dropbox ou un autre service cloud. Le cloud est une option de sauvegarde ou de synchronisation ; ce n’est pas un mécanisme de fusion entre deux sessions d’écriture.
+Avoid having two people write simultaneously to the same live folder, especially an SQLite database synchronized through Dropbox or another cloud service. The cloud is a backup or synchronization option; it is not a merge mechanism for two writing sessions.
 
-Après une erreur sérieuse, arrêtez-vous. Notez le fichier et l’opération concernés, restaurez un état connu, puis reprenez le travail. N’essayez pas de corriger à l’aveugle l’ensemble du corpus avant d’avoir compris le premier cas.
+After a serious error, stop. Note the affected file and operation, restore a known state, and then resume work. Do not try to correct the entire corpus blindly before understanding the first case.
 
 <a id="exporter"></a>
-## 7. Exporter et partager
+## 7. Export and share
 
-La commande **Fichier → Exporter le document…** produit une vue exportée du document selon les formats proposés par la version installée. Elle ne remplace pas le dossier du projet : les traductions, le schéma, les entités et l’historique n’y sont pas nécessairement inclus.
+The **File → Export document…** command produces an exported view of the document in the formats offered by the installed version. It does not replace the project folder: translations, the schema, entities, and history may not be included.
 
-Pour partager un projet avec un collègue, compressez son dossier entier et joignez une note indiquant le schéma utilisé, la version de Grognard et, si nécessaire, la manière d’accéder à la base d’entités. Le complément pour Word, LibreOffice ou OnlyOffice est un outil de rédaction et non une méthode d’export ; consultez à ce sujet les [fonctions de base](/guide/fonctions-de-base).
+To share a project with a colleague, compress its entire folder and include a note specifying the schema used, the Grognard version, and, if necessary, how to access the entity database. The Word, LibreOffice, or OnlyOffice add-in is a writing tool, not an export method; see [Basic features](/guide/fonctions-de-base) for more information.
 
-Pour comprendre le catalogue d’entités et sa relation avec les fichiers XML, consultez la page [Base de données](/guide/base-de-donnees).
+To understand the entity catalog and its relationship to XML files, see the [Database](/guide/base-de-donnees) page.
 
 <a id="continuer"></a>
-## 8. Avant de continuer
+## 8. Before continuing
 
-- Le dossier du projet porte un nom clair et se trouve dans un emplacement sauvegardé.
-- Un échantillon importé a été ouvert et relu en vue visuelle, puis en vue Source si nécessaire.
-- Vous savez où trouver **Time Machine** et vous disposez d’au moins une copie indépendante de l’ordinateur.
+- The project folder has a clear name and is stored in a backed-up location.
+- An imported sample has been opened and reviewed in Visual view, then in Source view if necessary.
+- You know where to find **Time Machine** and have at least one independent copy outside the computer.

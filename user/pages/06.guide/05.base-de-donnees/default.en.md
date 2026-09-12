@@ -1,32 +1,32 @@
 ---
-title: Base de données
-menu: Base de données
+title: Database
+menu: Database
 visible: false
 template: guide-detail
 guide_portrait: guide-database.png
-guide_intro: "Un catalogue local pour les entités, leurs variantes, leurs autorités et les décisions de votre édition."
+guide_intro: "A local catalog for entities, their variants, authorities, and your edition’s decisions."
 guide_toc:
-  - { id: distinguer, label: Deux choses à distinguer }
-  - { id: emplacement, label: Emplacement }
-  - { id: consulter, label: Consulter }
-  - { id: autorites, label: Autorités }
-  - { id: nettoyer, label: Nettoyer }
-  - { id: synchroniser, label: Synchroniser }
-  - { id: sauvegarder, label: Sauvegarder }
-  - { id: reutiliser, label: Réutiliser }
-  - { id: continuer, label: Continuer }
+  - { id: distinguer, label: Two things to distinguish }
+  - { id: emplacement, label: Location }
+  - { id: consulter, label: Browse }
+  - { id: autorites, label: Authorities }
+  - { id: nettoyer, label: Clean up }
+  - { id: synchroniser, label: Synchronize }
+  - { id: sauvegarder, label: Back up }
+  - { id: reutiliser, label: Reuse }
+  - { id: continuer, label: Continue }
 ---
 
 <a id="distinguer"></a>
-## 1. Deux choses à ne pas confondre
+## 1. Two things not to confuse
 
-| Dans le document | Dans la base de données |
+| In the document | In the database |
 | --- | --- |
-| Une forme de surface, comme `張衡` ou `Chang Heng` | Une fiche et un identifiant pour une seule entité |
-| `@key` sur la balise | L’entrée vers laquelle cet identifiant renvoie |
-| Peut apparaître de nombreuses fois et sous plusieurs formes | Devrait exister une seule fois par entité réelle |
+| A surface form, such as `張衡` or `Chang Heng` | A record and identifier for a single entity |
+| `@key` on the tag | The entry to which this identifier points |
+| May appear many times and in several forms | Should exist only once for each real-world entity |
 
-Sans fiche, vous n’avez que des chaînes de caractères. Avec une fiche, Grognard peut regrouper les mentions, réutiliser vos décisions dans les traductions et les extensions de traitement de texte, et rendre le corpus interrogeable.
+Without a record, you have only character strings. With one, Grognard can group mentions, reuse your decisions in translations and word-processor extensions, and make the corpus searchable.
 
 Par exemple :
 
@@ -34,89 +34,89 @@ Par exemple :
 <persName key="person-000020">張衡</persName>
 ```
 
-Le texte visible reste `張衡`. L’attribut `@key` indique la fiche à consulter ; celle-ci peut contenir ses variantes, ses dates, ses notes et ses liens vers des autorités.
+The visible text remains `張衡`. The `@key` attribute points to the record; the record can contain variants, dates, notes, and links to authorities.
 
-Les **packs d’autorités** — Wikidata, VIAF, BnF/NDL, CBDB, DILA, CHGIS, BDRC (via Wikidata), Norbert et d’autres — sont des données de référence utilisées lors des recherches. Ils ne constituent pas votre catalogue : votre base conserve les décisions, les compléments et les notes propres à votre projet.
+**Authority packs**—Wikidata, VIAF, BnF/NDL, CBDB, DILA, CHGIS, BDRC (via Wikidata), Norbert, and others—are reference data used during searches. They are not your catalog: your database preserves the decisions, additions, and notes specific to your project.
 
 <a id="emplacement"></a>
-## 2. Où se trouve la base ?
+## 2. Where is the database?
 
-Pour un travail individuel, Grognard utilise généralement un dossier central choisi au premier lancement, ou un dossier de données de l’application. Les projets qui ont activé **Synchroniser les entités avec la base de données centrale** peuvent y réutiliser les mêmes identifications d’un corpus à l’autre.
+For individual work, Grognard generally uses a central folder chosen on first launch, or an application-data folder. Projects that enable **Sync entities with the central database** can reuse the same identifications across corpora.
 
-Un projet peut aussi conserver une base locale, notamment pour un corpus partagé, pédagogique ou expérimental. Cette séparation évite que des identifiants locaux entrent en collision avec ceux d’une autre base ou qu’un travail particulier écrase une base centrale commune.
+A project can also keep a local database, especially for a shared, teaching, or experimental corpus. This separation prevents local identifiers from colliding with those in another database or a particular project from overwriting a shared central database.
 
-La base centrale se trouve en dehors du dossier du projet : ne l’ouvrez pas comme un projet Grognard. La base locale, elle, accompagne le projet. La différence est importante lorsque vous déplacez, partagez ou sauvegardez vos fichiers.
+The central database is outside the project folder: do not open it as a Grognard project. The local database travels with the project. This distinction matters when moving, sharing, or backing up files.
 
-Dans le dossier d’entités, la base de travail est `entities.sqlite`. `entities.xml` et les autres fichiers associés l’accompagnent pour l’import, la compatibilité et la récupération. Pour sauvegarder ou déplacer une base, copiez le dossier entier — base SQLite, XML, packs d’autorités et éventuels fichiers annexes — plutôt que l’un de ces fichiers seul.
+In the entity folder, the working database is `entities.sqlite`. `entities.xml` and the other associated files accompany it for import, compatibility, and recovery. To back up or move a database, copy the entire folder—SQLite database, XML, authority packs, and any supplementary files—rather than a single file.
 
-Dans **Paramètres → Base d’entités**, vous pouvez consulter l’emplacement de la base, l’afficher, en choisir un autre ou la déplacer. Un déplacement est une véritable opération sur les fichiers : faites une copie avant de l’effectuer et déplacez le dossier d’entités comme un ensemble.
+Under **Settings → Entity database**, you can view the database location, reveal it, choose another location, or move it. A move is a real file operation: make a copy first and move the entity folder as a whole.
 
 <a id="consulter"></a>
-## 3. Ouvrir et consulter le catalogue
+## 3. Open and browse the catalog
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_db_viewer.png"><img src="/images/screenshot_db_viewer.png" alt="Fenêtre de consultation de la base d’entités de Grognard"></a>
-  <figcaption>Le catalogue à côté du corpus</figcaption>
+  <a href="/images/screenshot_db_viewer.png"><img src="/images/screenshot_db_viewer.png" alt="Grognard entity-database browsing window"></a>
+  <figcaption>The catalog beside the corpus</figcaption>
 </figure>
 
-Le panneau **Base d’entités** donne accès aux fiches associées au projet. La fenêtre de base de données permet de rechercher une fiche, de filtrer les entités par type et, lorsque les deux existent, de distinguer les données **Projet** des données **Centrale**.
+The **Entity database** panel gives you access to records associated with the project. The database window lets you search for a record, filter entities by type, and, when both exist, distinguish **Project** data from **Central** data.
 
-Ouvrez une fiche pour consulter son nom principal, ses variantes — nom chinois, translittération, traduction ou autre forme —, son type, ses dates, ses liens d’autorité et sa description. Vous pouvez également ajouter des notes propres à cette entité, à la manière de Zotero, mais pour les personnes, les lieux et les œuvres de votre corpus.
+Open a record to view its primary name, variants—Chinese name, transliteration, translation, or another form—type, dates, authority links, and description. You can also add notes specific to the entity, much like Zotero, but for the people, places, and works in your corpus.
 
 <figure class="guide-screenshot-thumb">
-  <a href="/images/screenshot_db_cart.png"><img src="/images/screenshot_db_cart.png" alt="Fiche d’une entité dans la base de données"></a>
-  <figcaption>Modifier une fiche d’entité</figcaption>
+  <a href="/images/screenshot_db_cart.png"><img src="/images/screenshot_db_cart.png" alt="Entity record in the database"></a>
+  <figcaption>Edit an entity record</figcaption>
 </figure>
 
-Vous pouvez créer une fiche lorsqu’aucune autorité ne correspond, ou compléter une fiche existante pour les besoins précis de votre édition. Évitez en revanche de créer une deuxième fiche pour la même personne : si deux fiches désignent la même entité, utilisez l’opération de fusion proposée par la fenêtre de base de données.
+You can create a record when no authority matches, or complete an existing record for the specific needs of your edition. Avoid creating a second record for the same person, however: if two records refer to the same entity, use the merge operation offered by the database window.
 
-Le panneau **Attributs** montre l’identifiant porté par la balise ; la fiche complète se trouve dans la base. Modifier l’un sans vérifier l’autre est une cause fréquente de clés orphelines.
+The **Attributes** panel shows the identifier carried by the tag; the full record is in the database. Changing one without checking the other is a common cause of orphaned keys.
 
 <a id="autorites"></a>
-## 4. Relier les autorités
+## 4. Link authorities
 
-Une fiche peut porter plusieurs liens d’autorité. Les concordances entre Wikidata, VIAF, BnF, CBDB, DILA, CHGIS, BDRC ou d’autres catalogues sont normales : aucune source n’est complète et chacune possède son propre système d’identifiants.
+A record may contain several authority links. Concordances between Wikidata, VIAF, BnF, CBDB, DILA, CHGIS, BDRC, and other catalogs are normal: no source is complete, and each has its own identifier system.
 
-Les packs de ressources s’installent depuis **Paramètres → Packs de ressources**. Ils alimentent les recherches, le balisage par liste et les propositions de désambiguïsation. Le panneau de base de données peut aussi rétro-remplir certaines fiches avec des noms ou des informations disponibles dans les packs installés. Cette opération est facultative : relisez les données rapportées avant de les conserver comme informations de votre projet.
+Install resource packs through **Settings → Resource packs**. They power searches, list-based markup, and disambiguation suggestions. The database panel can also fill some records with names or information from installed packs. This is optional; review imported data before keeping it as project information.
 
 <a id="nettoyer"></a>
-## 5. Nettoyer le catalogue
+## 5. Clean up the catalog
 
-La fenêtre de base de données propose des outils de maintenance. **Nettoyage automatique** normalise certains noms et repère des doublons évidents ; **Lancer les analyses** recherche notamment les fiches vides, les noms incomplets, les liens d’autorité manquants ou les noms principaux problématiques.
+The database window provides maintenance tools. **Automatic cleanup** normalizes certain names and detects obvious duplicates; **Run analyses** looks for empty records, incomplete names, missing authority links, and problematic primary names.
 
-Traitez ces résultats comme une file de lecture, pas comme une vérité automatique. Selon le cas, vous pouvez **Accepter**, **Passer**, **Fusionner**, **Lier** ou **Marquer comme intentionnel**. **Récolter** ajoute les faits rencontrés dans les fiches de personnes du document actuellement ouvert ; ce n’est pas une récolte aveugle de tout le corpus.
+Treat these results as a review queue, not as automatic truth. Depending on the case, you can **Accept**, **Skip**, **Merge**, **Link**, or **Mark as intentional**. **Harvest** adds facts encountered in person records from the currently open document; it is not a blind harvest of the entire corpus.
 
-Avant un nettoyage important, créez un instantané. Examinez une catégorie de problème à la fois, enregistrez, puis vérifiez les documents qui utilisent les fiches modifiées. Ne lancez pas une opération globale sur une base de plusieurs milliers d’entrées sans avoir d’abord observé son rapport.
+Before a significant cleanup, create a snapshot. Review one problem category at a time, save, then check the documents that use the modified records. Do not run a global operation on a database with thousands of entries without first examining its report.
 
 <a id="synchroniser"></a>
-## 6. Synchroniser et collaborer
+## 6. Synchronize and collaborate
 
-Activer la synchronisation permet de faire remonter les entités du projet dans la base centrale et de réutiliser les fiches dans d’autres projets. En cas de lien manquant, de conflit ou de divergence, le **Pont vers la base centrale** permet d’examiner la situation et de choisir la marche à suivre.
+Enabling synchronization pushes project entities to the central database and lets you reuse records in other projects. If a link is missing or there is a conflict or discrepancy, the **Central database bridge** lets you examine the situation and choose what to do.
 
-Une **clé orpheline** est un identifiant présent sur une balise mais absent de la base correspondante. Cela peut arriver après une restauration partielle, une modification manuelle ou une synchronisation interrompue. Grognard peut proposer de créer une fiche minimale à partir du nom balisé, de retirer la clé tout en conservant la balise, ou de laisser la situation intacte afin de restaurer la bonne base.
+An **orphaned key** is an identifier present on a tag but absent from the corresponding database. This can happen after a partial restore, manual edit, or interrupted synchronization. Grognard may offer to create a minimal record from the tagged name, remove the key while keeping the tag, or leave the situation unchanged so you can restore the correct database.
 
-Ne faites pas écrire simultanément deux ordinateurs dans le même dossier d’entités synchronisé par Dropbox ou un service équivalent. Pour un projet partagé sur clé USB ou avec Git, décidez dès le départ si chacun utilise une base locale au projet ou si tous les utilisateurs ont accès à la même base centrale.
+Do not have two computers write simultaneously to the same entity folder synchronized by Dropbox or a similar service. For a project shared via USB drive or Git, decide from the outset whether each person will use a project-local database or everyone will access the same central database.
 
 <a id="sauvegarder"></a>
-## 7. Sauvegarder la base
+## 7. Back up the database
 
-La base d’entités est un deuxième patient, distinct des fichiers XML. Utilisez les instantanés **Time Machine** de Grognard lorsque la fonction est disponible pour la base concernée, et conservez une copie indépendante du dossier d’entités — XML, SQLite et fichiers associés — sur un autre support.
+The entity database is a second patient, separate from the XML files. Use Grognard’s **Time Machine** snapshots when available for the database concerned, and keep an independent copy of the entity folder—XML, SQLite, and associated files—on another medium.
 
-Restaurer un ancien XML avec une base plus récente, ou une base ancienne avec des textes plus récents, peut produire des clés orphelines. La restauration doit donc porter sur les deux côtés du lien : les textes et la base qui leur correspond.
+Restoring an old XML with a newer database, or an old database with newer texts, can produce orphaned keys. Restoration must therefore cover both sides of the link: the texts and the corresponding database.
 
-La sauvegarde cloud peut constituer une copie utile si elle est activée et configurée, mais elle ne doit pas devenir un dossier de travail à deux écritures simultanées. Pour les détails sur la sauvegarde de l’ensemble du projet, consultez la page [Fichiers](/guide/fichiers).
+Cloud backup can be useful when enabled and configured, but it should not become a working folder with two simultaneous writers. For details on backing up the entire project, see the [Files](/guide/fichiers) page.
 
 <a id="reutiliser"></a>
-## 8. Réutiliser les fiches
+## 8. Reuse records
 
-Le complément Grognard pour **Word** lit cette base pour insérer des champs, des noms, des sinogrammes, des traductions et des dates dans un article. Une fiche incomplète produit naturellement une citation incomplète : le temps passé à enrichir le catalogue est donc réutilisé au moment de la rédaction.
+The Grognard **Word** add-in reads this database to insert fields, names, Chinese characters, translations, and dates into an article. An incomplete record naturally produces an incomplete citation, so time spent enriching the catalog is reused when writing.
 
-Les intégrations LibreOffice et OnlyOffice sont présentées sur la page [Télécharger](/download) selon leur état de distribution. La traduction IA, les variables d’entités et les outils spécialisés sont décrits dans les [fonctions de base](/guide/fonctions-de-base) et les [fonctions avancées](/guide/fonctions-avancees).
+LibreOffice and OnlyOffice integrations are described on the [Download](/download) page according to their availability. AI translation, entity variables, and specialized tools are described in [Basic features](/guide/fonctions-de-base) and [Advanced features](/guide/fonctions-avancees).
 
 <a id="continuer"></a>
-## 9. Avant de continuer
+## 9. Before continuing
 
-- Vous pouvez ouvrir la base d’entités et retrouver la fiche correspondant à une mention de votre document.
-- Vous savez si votre projet utilise une base locale ou la base centrale.
-- Vous connaissez l’emplacement du dossier d’entités et vous ne le confondez pas avec un dossier de projet.
-- Vous avez distingué votre catalogue des packs d’autorités et prévu une copie de sauvegarde.
+- You can open the entity database and find the record corresponding to a mention in your document.
+- You know whether your project uses a local database or the central database.
+- You know where the entity folder is located and do not confuse it with a project folder.
+- You have distinguished your catalog from the authority packs and arranged a backup copy.

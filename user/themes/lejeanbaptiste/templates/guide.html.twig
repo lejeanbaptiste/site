@@ -1,47 +1,48 @@
 {% extends 'default.html.twig' %}
 
 {% block main %}
+  {% set is_en = grav.language.getLanguage == 'en' %}
   <main class="guide-page">
     <section class="guide-hero">
       <div class="guide-hero__main">
-        <p class="eyebrow">Guide de l’atelier</p>
-        <h1>Du premier folio<br>au texte <em>vivant.</em></h1>
-        <p>Quatre chapitres pour le travail quotidien. Ci-dessous : où regarder à l’écran, puis les raccourcis à garder sous la main.</p>
-        <p class="guide-hero__hint">Première séance : <a href="/guide/fonctions-de-base">Fonctions de base</a>, §§1–4 — installation, projet, quelques paragraphes.</p>
+        <p class="eyebrow">{{ is_en ? 'Workshop guide' : 'Guide de l’atelier' }}</p>
+        <h1>{% if is_en %}From the first folio<br>to a <em>living</em> text.{% else %}Du premier folio<br>au texte <em>vivant.</em>{% endif %}</h1>
+        <p>{{ is_en ? 'Four chapters for everyday work. Below: where to look on screen, followed by the shortcuts worth keeping handy.' : 'Quatre chapitres pour le travail quotidien. Ci-dessous : où regarder à l’écran, puis les raccourcis à garder sous la main.' }}</p>
+        <p class="guide-hero__hint">{% if is_en %}First session: <a href="/guide/fonctions-de-base">Basic features</a>, §§1–4—installation, project setup, and a few paragraphs.{% else %}Première séance : <a href="/guide/fonctions-de-base">Fonctions de base</a>, §§1–4 — installation, projet, quelques paragraphes.{% endif %}</p>
       </div>
-      <div class="guide-feature-grid" aria-label="Les grands domaines du guide">
+      <div class="guide-feature-grid" aria-label="Guide areas">
         <a class="guide-feature-card" href="/guide/fonctions-avancees">
           <figure>
-          <img src="{{ url('theme://images/guide-advanced-card.webp') }}" alt="Portrait d’un officier en uniforme" loading="eager">
-          <figcaption>Fonctionnalités avancées</figcaption>
+          <img src="{{ url('theme://images/guide-advanced-card.webp') }}" alt="Portrait of an officer in uniform" loading="eager">
+          <figcaption>{{ is_en ? 'Advanced features' : 'Fonctionnalités avancées' }}</figcaption>
           </figure>
         </a>
         <a class="guide-feature-card" href="/guide/fonctions-de-base">
           <figure>
-            <img src="{{ url('theme://images/guide-basic-card.webp') }}" alt="Portrait d’un officier en uniforme devant un palais" loading="eager">
-            <figcaption>Fonctions de base</figcaption>
+            <img src="{{ url('theme://images/guide-basic-card.webp') }}" alt="Portrait of an officer in uniform before a palace" loading="eager">
+            <figcaption>{{ is_en ? 'Basic features' : 'Fonctions de base' }}</figcaption>
           </figure>
         </a>
         <a class="guide-feature-card" href="/guide/fichiers">
           <figure>
-            <img src="{{ url('theme://images/guide-files-card.webp') }}" alt="Portrait d’un soldat chargé de dossiers" loading="eager">
-            <figcaption>Fichiers</figcaption>
+            <img src="{{ url('theme://images/guide-files-card.webp') }}" alt="Portrait of a soldier carrying files" loading="eager">
+            <figcaption>{{ is_en ? 'Files' : 'Fichiers' }}</figcaption>
           </figure>
         </a>
         <a class="guide-feature-card" href="/guide/base-de-donnees">
           <figure>
-            <img src="{{ url('theme://images/guide-database-card.webp') }}" alt="Portrait d’un archiviste dans une salle de données" loading="eager">
-            <figcaption>Base de données</figcaption>
+            <img src="{{ url('theme://images/guide-database-card.webp') }}" alt="Portrait of an archivist in a data room" loading="eager">
+            <figcaption>{{ is_en ? 'Database' : 'Base de données' }}</figcaption>
           </figure>
         </a>
       </div>
-      <nav class="guide-anchors" aria-label="Sommaire du guide">
-        <a href="/guide/fonctions-de-base">Fonctions de base</a>
-        <a href="/guide/fonctions-avancees">Fonctions avancées</a>
-        <a href="/guide/fichiers">Fichiers</a>
-        <a href="/guide/base-de-donnees">Base de données</a>
-        <a href="#panneaux">Panneaux</a>
-        <a href="#raccourcis">Raccourcis</a>
+      <nav class="guide-anchors" aria-label="{{ is_en ? 'Guide contents' : 'Sommaire du guide' }}">
+        <a href="/guide/fonctions-de-base">{{ is_en ? 'Basic features' : 'Fonctions de base' }}</a>
+        <a href="/guide/fonctions-avancees">{{ is_en ? 'Advanced features' : 'Fonctions avancées' }}</a>
+        <a href="/guide/fichiers">{{ is_en ? 'Files' : 'Fichiers' }}</a>
+        <a href="/guide/base-de-donnees">{{ is_en ? 'Database' : 'Base de données' }}</a>
+        <a href="#panneaux">{{ is_en ? 'Panels' : 'Panneaux' }}</a>
+        <a href="#raccourcis">{{ is_en ? 'Shortcuts' : 'Raccourcis' }}</a>
       </nav>
     </section>
     <div class="guide-content">{{ page.content|raw }}</div>
